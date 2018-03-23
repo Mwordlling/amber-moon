@@ -1,15 +1,16 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/base";
+@import "components/grid";
 @import "components/header";
-@import "components/footer";
 
 p {
   hyphens: auto;
+  word-wrap: break-word;
 }
 
-$cell: 128px;
-$narrow-cell: calc(100vw / 11);
+$cell-fixed: 128px;
+$cell-fluid: 100vw / 11;
 
 html, body, div, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -17,8 +18,6 @@ html, body, div, h1, h2, h3, h4, h5, h6, p {
   border: 0;
   //vertical-align: top;
 }
-
-
 
 body {
   font-family: "Anonymous Pro", sans-serif!important;
@@ -35,19 +34,19 @@ body {
   @media #{$brk-fixed} {
     border:solid #7b7a7a 1px;
     margin: 0 auto;
-    width:calc(128px * 9);
-    background-size: $cell $cell;
+    width: $cell-fixed * 9;
+    background-size: $cell-fixed $cell-fixed;
     background-image: linear-gradient(to right, #7b7a7a 1px, transparent 1px),
     linear-gradient(to bottom, #7b7a7a 1px, #706f6f 1px);
   }
 
   @media #{$brk-fluid}{
     //border:solid #7b7a7a 1px;
-    margin-left: $narrow-cell;
-    margin-right: $narrow-cell;
-    width: calc(100vw - (#{$narrow-cell}) * 2);
+    margin-left: $cell-fluid;
+    margin-right: $cell-fluid;
+    width: 100vw - $cell-fluid * 2;
 
-    background-size: $narrow-cell $narrow-cell;
+    background-size: $cell-fluid $cell-fluid;
     background-image: linear-gradient(to right, #7b7a7a 1px, transparent 1px),
     linear-gradient(to bottom, #7b7a7a 1px, #706f6f 1px);
   }
@@ -62,20 +61,20 @@ body {
 .top {
   @media #{$brk-fixed} {
     //margin: 0 auto;
-    width:calc(128px * 9);
-    height: $cell;
+    width: $cell-fixed * 9;
+    height: $cell-fixed;
     vertical-align: middle;
   }
   @media #{$brk-fluid}{
     width: 100%;
-    height: $narrow-cell;
-    //max-height: calc(#{$narrow-cell} * 2);
+    height: $cell-fluid;
+    //max-height: HUI(#{$narrow-cell} * 2);
     vertical-align: middle;
   }
   @media #{$brk-mobile}{
     width: 100%;
     //height: $narrow-cell;
-   height: calc(#{$narrow-cell} * 2);
+   height: $cell-fluid * 2;
     vertical-align: middle;
   }
 }
@@ -83,14 +82,15 @@ body {
 .bottom {
   @media #{$brk-fixed} {
     margin: 0 auto;
-    width: 1280px;
-    height: $cell;
+    width: $cell-fixed * 9;
+    height: $cell-fixed;
     vertical-align: middle;
   }
   @media #{$brk-fluid}{
-    width: 100%;
-    min-height: $narrow-cell;
-    max-height: calc(#{$narrow-cell} * 3);
+    margin: 0 auto;
+    width: $cell-fluid * 9;
+    min-height: $cell-fluid;
+    max-height: $cell-fluid * 3;
     vertical-align: middle;
   }
 }
@@ -103,8 +103,8 @@ body {
 
 .roww {
   display:inline-block;
-  font-size: 0;
-  line-height: 0;
+  //font-size: 0;
+  //line-height: 0;
 }
 
 .block {
@@ -116,25 +116,25 @@ body {
 
 .img1 {
   @media #{$brk-fixed} {
-    width:calc(#{$cell} * 2);
-    height: calc(#{$cell} * 2);
-    margin-left: calc(#{$cell}  * 7);
+    width: $cell-fixed * 2;
+    height: $cell-fixed * 2;
+    margin-left: $cell-fixed * 7;
   }
 
   @media #{$brk-fluid} {
-    width:calc(#{$narrow-cell} * 2);
-    height: calc(#{$narrow-cell} * 2);
-    margin-left: calc(#{$narrow-cell}  * 7);
+    width:$cell-fluid * 2;
+    height: $cell-fluid * 2;
+    margin-left: $cell-fluid  * 7;
   }
 }
 
 .height-2 {
   @media #{$brk-fixed} {
-    height: calc(#{$cell} * 2);
+    height: $cell-fixed * 2;
     margin-top:0;
   }
   @media #{$brk-fluid} {
-    height: calc(#{$narrow-cell} * 2);
+    height: $cell-fluid * 2;
     margin-top:-8px;
   }
 }
@@ -146,7 +146,7 @@ h1 {
   @media  #{$brk-fixed} {
     font-size:137px;
     line-height: 130px;
-    margin-left:$cell;
+    margin-left: $cell-fixed;
     margin-top:-128px;
     vertical-align: top;
     h1:first-line {
@@ -155,22 +155,22 @@ h1 {
   }
 
   @media #{$brk-fluid}  {
-    width:calc(#{$narrow-cell} * 4);
+    width:$cell-fluid * 4;
     font-size:10vw;
     line-height:9.3vw;
-    margin-left: #{$narrow-cell};
-    margin-top: -(calc(100vw / 11));
-    height: calc(#{$narrow-cell} * 2);
+    margin-left: #{$cell-fluid};
+    margin-top: -100vw / 11;
+    height: $cell-fluid * 2;
     vertical-align: top;
   }
 
   @media #{$brk-mobile}  {
-    width:calc(#{$narrow-cell} * 4);
+    width:$cell-fluid * 4;
     font-size:10vw;
     line-height:9vw;
-    margin-left: #{$narrow-cell};
-    margin-top: -(calc(100vw / 11));
-    height: calc(#{$narrow-cell} * 2);
+    margin-left: #{$cell-fluid};
+    margin-top: -100vw / 11;
+    height: $cell-fluid * 2;
     vertical-align: top;
   }
 }
@@ -182,15 +182,15 @@ h1 {
   @media
 
   #{$brk-fixed} {
-    width:calc(#{$cell} * 3);
-    height: calc(#{$cell} * 2);
-    margin-top: calc(#{$cell} );
+    width:$cell-fixed * 3;
+    height: $cell-fixed * 2;
+    margin-top: $cell-fixed ;
   }
 
   @media #{$brk-fluid} {
-    width:calc(#{$narrow-cell} * 3);
-    height: calc(#{$narrow-cell} * 2);
-    margin-top: $narrow-cell;
+    width:$cell-fluid * 3;
+    height: $cell-fluid * 2;
+    margin-top: $cell-fluid;
   }
 
   @media #{$brk-mobile} {
@@ -206,30 +206,30 @@ h3 {
   vertical-align: baseline;
 
   @media #{$brk-fixed} {
-    height:calc(#{$cell} * 2);
+    height:$cell-fixed * 2;
     font-size: 28px;
     line-height: 44px;
-    width: calc(#{$cell} * 4.8);
-    margin-top: $cell;
-    margin-left: $cell;
+    width: $cell-fixed * 4.8;
+    margin-top: $cell-fixed;
+    margin-left: $cell-fixed;
   }
 
   @media #{$brk-fluid} {
-    height:calc(#{$narrow-cell} * 3);
+    height:$cell-fluid * 3;
     font-size: 2.2vw;
     line-height: 3.2vw;
-    width: calc(#{$narrow-cell} * 4.8);
-    margin-top: calc(#{$narrow-cell} - 8px);
-    margin-bottom: $narrow-cell;
-    margin-left: calc(#{$narrow-cell});
+    width: $cell-fluid * 4.8;
+    margin-top: calc(#{$cell-fluid} - 8px);
+    margin-bottom: $cell-fluid;
+    margin-left: $cell-fluid;
   }
 
   @media #{$brk-mobile} {
-    height:calc(#{$narrow-cell} * 3);
+    height:$cell-fluid * 3;
     margin-bottom: 0;
-    margin-top: $narrow-cell;
-    margin-left: #{$narrow-cell};
-    width: calc(#{$narrow-cell} * 7);
+    margin-top: $cell-fluid;
+    margin-left: #{$cell-fluid};
+    width: $cell-fluid * 7;
     font-size: 3.2vw;
     line-height: 4.3vw;
 
@@ -240,15 +240,15 @@ h3 {
 .img3 {
   vertical-align: top;
   @media #{$brk-fixed} {
-    width:$cell;
-    height: calc(#{$cell} * 3);
-    margin-top: calc(#{$narrow-cell} * 2 + 16px);
+    width: $cell-fixed;
+    height: $cell-fixed * 3;
+    margin-top: calc(#{$cell-fluid * 2} + 16px);
   }
 
   @media #{$brk-fluid} {
-    width:$narrow-cell;
-    height: calc(#{$narrow-cell} * 3);
-    margin-top: calc(#{$narrow-cell} - 8px);
+    width: $cell-fluid;
+    height: $cell-fluid * 3;
+    margin-top: calc(#{$cell-fluid} - 8px);
   }
 
   @media #{$brk-mobile} {
@@ -285,19 +285,19 @@ h3 {
 
 .paragraph1 {
   @media  #{$brk-fixed} {
-    margin-top:calc(#{$cell} * 2);
-    margin-left:$cell;
-    width: calc(#{$cell} * 3);
-    height: calc(#{$cell} * 8);
+    margin-top:$cell-fixed * 2;
+    margin-left: $cell-fixed;
+    width: $cell-fixed * 3;
+    height: $cell-fixed * 8;
   }
 
   @media #{$brk-fluid} {
     position: relative;
     vertical-align: top;
-    margin-top: calc(#{$narrow-cell} * 3 - 18px);
-    width: calc(#{$narrow-cell} * 3);
-    margin-left: $narrow-cell;
-    height: calc(#{$narrow-cell} * 16);
+    margin-top: calc(#{$cell-fluid} * 3 - 18px);
+    width: $cell-fluid * 3;
+    margin-left: $cell-fluid;
+    height: $cell-fluid * 16;
   }
 
 
@@ -306,9 +306,9 @@ h3 {
 .incut {
   @media #{$brk-fixed} {
     position:absolute;
-    top:calc(#{$cell} * 2);
-    left: calc(#{$cell} * 6);
-    width:calc(#{$cell} - 15px);
+    top:$cell-fixed * 2;
+    left: $cell-fixed * 6;
+    width:$cell-fixed - 15px;
     vertical-align: top;
     font-size: 34px;
     line-height: 38px;
@@ -317,9 +317,9 @@ h3 {
 
   @media #{$brk-fluid} {
     position:absolute;
-    top:calc(#{$narrow-cell} * 4);
-    left: calc(#{$narrow-cell} * 6);
-    width:calc(#{$narrow-cell});
+    top: $cell-fluid * 4;
+    left: $cell-fluid * 6;
+    width: $cell-fluid * 2;
     vertical-align: top;
     font-size: 3vw;
     line-height: 4vw;
@@ -333,17 +333,17 @@ h3 {
 .img4 {
   vertical-align: top;
   @media #{$brk-fixed} {
-    margin-left: calc(#{$cell} * 2);
-    width:calc(#{$cell} * 2);
-    height: calc(#{$cell} * 3);
-    margin-top: $cell;
+    margin-left: $cell-fixed * 2;
+    width:$cell-fixed * 2;
+    height: $cell-fixed * 3;
+    margin-top: $cell-fixed;
   }
 
   @media #{$brk-fluid} {
-    width:calc(#{$narrow-cell} * 2);
-    height: calc(#{$narrow-cell} * 3);
-    margin-top: calc(#{$narrow-cell} * 2 - 8px);
-    margin-left: calc(#{$narrow-cell} * 2);
+    width: $cell-fluid * 2;
+    height: $cell-fluid * 3;
+    margin-top: calc(#{$cell-fluid} * 2 - 8px);
+    margin-left: $cell-fluid * 2;
   }
 
   @media #{$brk-mobile} {
@@ -355,17 +355,17 @@ h3 {
 
 .img5 {
   @media #{$brk-fixed} {
-    margin-left:calc(#{$cell} * 2);
-    width:calc(#{$cell} * 2);
-    height: calc(#{$cell} * 3);
-    margin-top: $cell;
+    margin-left:$cell-fixed * 2;
+    width:$cell-fixed * 2;
+    height: $cell-fixed * 3;
+    margin-top: $cell-fixed;
   }
 
   @media #{$brk-fluid} {
-    margin-left:calc(#{$narrow-cell} * 2);
-    width:calc(#{$narrow-cell} * 2);
-    height: calc(#{$narrow-cell} * 3);
-    margin-top: $narrow-cell;
+    margin-left:$cell-fluid * 2;
+    width:$cell-fluid * 2;
+    height: $cell-fluid * 3;
+    margin-top: $cell-fluid;
   }
 
   @media #{$brk-mobile} {
@@ -375,10 +375,10 @@ h3 {
 
 .incut2 {
   @media #{$brk-fixed} {
-    margin-top:calc(#{$cell} * 2 - 8px);
-    margin-left: $cell;
-    width:calc(#{$cell} * 4 - 15px);
-    height: $cell;
+    margin-top: $cell-fixed * 2 - 8px;
+    margin-left: $cell-fixed;
+    width: $cell-fixed * 4 - 15px;
+    height: $cell-fixed;
     vertical-align: top;
     font-size: 34px;
     line-height: 38px;
@@ -387,10 +387,10 @@ h3 {
 
   @media #{$brk-fluid}  {
     position:relative;
-    margin-top:$narrow-cell;
-    margin-left: $narrow-cell;
-    width:calc(#{$narrow-cell} * 4);
-    height: $narrow-cell;
+    margin-top: $cell-fluid;
+    margin-left: $cell-fluid;
+    width:$cell-fluid * 4;
+    height: $cell-fluid;
     vertical-align: top;
     font-size: 3vw;
     line-height: 4vw;
@@ -400,16 +400,16 @@ h3 {
 
 .img6 {
   @media #{$brk-fixed} {
-    margin-left:calc(#{$cell} * 6);
-    width:$cell;
-    height: $cell;
+    margin-left:$cell-fixed * 6;
+    width: $cell-fixed;
+    height: $cell-fixed;
     margin-top: -8px;
   }
 
   @media #{$brk-fluid} {
-    margin-left:calc(#{$narrow-cell} * 6);
-    width:$narrow-cell;
-    height:$narrow-cell;
+    margin-left:$cell-fluid * 6;
+    width: $cell-fluid;
+    height: $cell-fluid;
     margin-top: 0;
   }
 
@@ -421,16 +421,16 @@ h3 {
 .paragraph2 {
   @media #{$brk-fixed} {
     margin-top:-8px;
-    margin-left:calc(#{$cell} * 2);
-    width: calc(#{$cell} * 3);
-    height: calc(#{$cell} * 6);
+    margin-left:$cell-fixed * 2;
+    width: $cell-fixed * 3;
+    height: $cell-fixed * 6;
   }
 
   @media #{$brk-fluid} {
     margin-top:0;
-    width: calc(#{$narrow-cell} * 3);
-    margin-left: calc(#{$narrow-cell} * 2);
-    height: calc(#{$narrow-cell} * 12);
+    width: $cell-fluid * 3;
+    margin-left: $cell-fluid * 2;
+    height: $cell-fluid * 12;
   }
 
   //@media #{$brk-mobile} {
@@ -443,10 +443,10 @@ h3 {
 
 .incut3 {
   @media  #{$brk-fixed} {
-    margin-top:$cell;
-    margin-left: calc(#{$cell} * 2);
-    width:calc(#{$cell} * 2);
-    height: $cell;
+    margin-top: $cell-fixed;
+    margin-left: $cell-fixed * 2;
+    width:$cell-fixed * 2;
+    height: $cell-fixed;
     vertical-align: top;
     font-size: 34px;
     line-height: 38px;
@@ -454,10 +454,10 @@ h3 {
   }
 
   @media #{$brk-fluid}  {
-    margin-top:$narrow-cell;
-    margin-left: calc(#{$narrow-cell} * 2);
-    width:calc(#{$narrow-cell} * 2 - 8px);
-    height: $narrow-cell;
+    margin-top: $cell-fluid;
+    margin-left: $cell-fluid * 2;
+    width:calc(#{$cell-fluid} * 2 - 8px);
+    height: $cell-fluid;
     vertical-align: top;
     font-size: 3vw;
     line-height: 4vw;
@@ -468,17 +468,17 @@ h3 {
 
 .img7 {
   @media #{$brk-fixed} {
-    margin-left:$cell;
-    width:calc(#{$cell} * 3);
-    height: $cell;
-    margin-top: calc(#{$cell} + 6px);
+    margin-left: $cell-fixed;
+    width:$cell-fixed * 3;
+    height: $cell-fixed;
+    margin-top: $cell-fixed + 6px;
   }
 
   @media #{$brk-fluid}  {
-    margin-left:$narrow-cell;
-    width:calc(#{$narrow-cell} * 3);
-    height:$narrow-cell;
-    margin-top: calc(#{$narrow-cell} - 10px);
+    margin-left: $cell-fluid;
+    width:$cell-fluid * 3;
+    height: $cell-fluid;
+    margin-top: calc(#{$cell-fluid} - 10px);
   }
 
 }
@@ -486,31 +486,31 @@ h3 {
 .img8 {
   vertical-align: top;
   @media #{$brk-fixed} {
-    width:calc(#{$cell} * 2);
-    height: calc(#{$cell} * 2);
-    margin-top: calc(#{$cell} * 2);
+    width:$cell-fixed * 2;
+    height: $cell-fixed * 2;
+    margin-top: $cell-fixed * 2;
   }
 
   @media #{$brk-fluid} {
-    width:calc(#{$narrow-cell} * 2);
-    height: calc(#{$narrow-cell} * 2);
-    margin-top: calc(#{$narrow-cell} * 2);
+    width:$cell-fluid * 2;
+    height: $cell-fluid * 2;
+    margin-top: $cell-fluid * 2;
   }
 }
 
 .paragraph3 {
   @media #{$brk-fixed} {
-    margin-top: $cell;
+    margin-top: $cell-fixed;
     margin-left: 0;
-    width: calc(#{$cell} * 3);
-    height: calc(#{$cell} * 10);
+    width: $cell-fixed * 3;
+    height: $cell-fixed * 10;
 }
 
   @media #{$brk-fluid} {
     margin-left: 0;
-    margin-top: calc(#{$narrow-cell}  - 8px);
-    width: calc(#{$narrow-cell} * 3);
-    height: calc(#{$narrow-cell} * 20);
+    margin-top: calc(#{$cell-fluid}  - 8px);
+    width: $cell-fluid * 3;
+    height: $cell-fluid * 20;
   }
 
   //@media #{$brk-mobile} {
@@ -525,18 +525,18 @@ h3 {
 .img9 {
   @media #{$brk-fixed} {
     position:absolute;
-    left: calc(#{$cell} * 5);
-    top: calc(#{$cell} * 5);
-    width:calc(#{$cell} * 3);
-    height: calc(#{$cell} * 2);
+    left: $cell-fixed * 5;
+    top: $cell-fixed * 5;
+    width:$cell-fixed * 3;
+    height: $cell-fixed * 2;
   }
 
   @media #{$brk-fluid} {
     position:absolute;
-    left: calc(#{$narrow-cell} * 5);
-    top: calc(#{$narrow-cell} * 5);
-    width:calc(#{$narrow-cell} * 3);
-    height: calc(#{$narrow-cell} * 2);
+    left: $cell-fluid * 5;
+    top: $cell-fluid * 5;
+    width:$cell-fluid * 3;
+    height: $cell-fluid * 2;
   }
 
 
@@ -545,17 +545,17 @@ h3 {
 .img10 {
   vertical-align: top;
   @media #{$brk-fixed} {
-    margin-left: calc(#{$cell} * 2);
-    width:calc(#{$cell} * 2);
-    height: calc(#{$cell} * 3);
+    margin-left: $cell-fixed * 2;
+    width:$cell-fixed * 2;
+    height: $cell-fixed * 3;
     margin-top: 0;
     padding:0;
   }
 
   @media #{$brk-fluid} {
-    margin-left: calc(#{$narrow-cell} * 2);
-    width:calc(#{$narrow-cell} * 2);
-    height: calc(#{$narrow-cell} * 3);
+    margin-left: $cell-fluid * 2;
+    width:$cell-fluid * 2;
+    height: $cell-fluid * 3;
     margin-top: 0;
   }
 
@@ -569,26 +569,26 @@ h3 {
 
 .img11 {
   @media #{$brk-fixed} {
-    width:calc(#{$cell} * 2);
-    height: calc(#{$cell} * 2);
-    margin-top: calc(#{$cell} * 1);
-    margin-left:$cell;
+    width:$cell-fixed * 2;
+    height: $cell-fixed * 2;
+    margin-top: $cell-fixed * 1;
+    margin-left: $cell-fixed;
   }
 
   @media #{$brk-fluid}  {
-    width:calc(#{$narrow-cell} * 2);
-    height: calc(#{$narrow-cell} * 2);
-    margin-top: calc(#{$narrow-cell} * 2);
-    margin-left:$narrow-cell;
+    width:$cell-fluid * 2;
+    height: $cell-fluid * 2;
+    margin-top: $cell-fluid * 2;
+    margin-left: $cell-fluid;
   }
 }
 
 .incut4 {
   @media #{$brk-fixed} {
-    margin-top: calc(#{$cell} * 1);
+    margin-top: $cell-fixed * 1;
     margin-left: 0;
-    width:calc(#{$cell} * 4);
-    height: $cell;
+    width:$cell-fixed * 4;
+    height: $cell-fixed;
     vertical-align: top;
     font-size: 34px;
     line-height: 38px;
@@ -596,10 +596,10 @@ h3 {
   }
 
   @media #{$brk-fluid} {
-    margin-top:calc(#{$narrow-cell} * 2 - 8px);
+    margin-top:calc(#{$cell-fluid} * 2 - 8px);
     margin-left: 0;
-    width:calc(#{$narrow-cell} * 4);
-    height: $narrow-cell;
+    width:$cell-fluid * 4;
+    height: $cell-fluid;
     vertical-align: top;
     font-size: 3vw;
     line-height: 4vw;
@@ -609,25 +609,25 @@ h3 {
 
 .paragraph4 {
   @media #{$brk-fixed} {
-    margin-top: $cell;
-    margin-left:calc(#{$cell} * 2);
-    width: calc(#{$cell} * 3);
-    height: calc(#{$cell} * 3);
+    margin-top: $cell-fixed;
+    margin-left:$cell-fixed * 2;
+    width: $cell-fixed * 3;
+    height: $cell-fixed * 3;
   }
   @media #{$brk-fluid}  {
-    margin-top: $narrow-cell;
-    width: calc(#{$narrow-cell} * 3);
-    margin-left: calc(#{$narrow-cell} * 2);
+    margin-top: $cell-fluid;
+    width: $cell-fluid * 3;
+    margin-left: $cell-fluid * 2;
   }
 }
 
 .incut5 {
   text-align: center;
   @media #{$brk-fixed} {
-    margin-top: $cell;
-    margin-left: $cell;
-    width:calc(#{$cell} * 7);
-    height: $cell;
+    margin-top: $cell-fixed;
+    margin-left: $cell-fixed;
+    width:$cell-fixed * 7;
+    height: $cell-fixed;
     vertical-align: top;
     font-size: 34px;
     line-height: 38px;
@@ -635,10 +635,10 @@ h3 {
   }
 
   @media #{$brk-fluid} {
-    margin-top:$narrow-cell;
-    margin-left: $narrow-cell;
-    width:calc(#{$narrow-cell} * 7);
-    height: $narrow-cell;
+    margin-top: $cell-fluid;
+    margin-left: $cell-fluid;
+    width:$cell-fluid * 7;
+    height: $cell-fluid;
     vertical-align: top;
     font-size: 3vw;
     line-height: 4vw;
@@ -651,14 +651,14 @@ h3 {
   text-align: right;
 
   @media  #{$brk-fixed} {
-    margin-left: calc(#{$cell} * 2.5);
-    width:calc(#{$cell} * 2);
+    margin-left: $cell-fixed * 2.5;
+    width:$cell-fixed * 2;
     font-size: 16px;
     line-height: 22px;
   }
   @media #{$brk-fluid}  {
-    margin-left: calc(#{$narrow-cell} * 2);
-    width:calc(#{$narrow-cell} * 3);
+    margin-left: $cell-fluid * 2;
+    width: $cell-fluid * 2;
     font-size: 2vw;
     line-height: 3vw;
   }
@@ -669,14 +669,14 @@ h3 {
   text-align: left;
   @media #{$brk-fixed} {
     margin-left: 30px;
-    width:calc(#{$cell} * 2);
+    width:$cell-fixed * 2;
     font-size: 16px;
     line-height: 22px;
   }
 
   @media #{$brk-fluid} {
     margin-left: 30px;
-    width:calc(#{$narrow-cell} * 2);
+    width:$cell-fluid * 2;
     font-size: 2vw;
     line-height: 3vw;
   }
@@ -699,10 +699,10 @@ h3 {
 
   @media #{$brk-mobile}{
     display:block;
-    margin-left: $narrow-cell;
-    margin-right: $narrow-cell;
-    width: calc(100vw - (#{$narrow-cell}) * 2);
-    background-size: $narrow-cell $narrow-cell;
+    margin-left: $cell-fluid;
+    margin-right: $cell-fluid;
+    width: 100vw - $cell-fluid * 2;
+    background-size: $cell-fluid $cell-fluid;
     background-image: linear-gradient(to right, #7b7a7a 1px, transparent 1px),
     linear-gradient(to bottom, #7b7a7a 1px, #706f6f 1px);
   }
@@ -712,67 +712,67 @@ h3 {
   @media #{$brk-mobile} {
     font-size: 3vw;
     line-height: 3.4vw;
-    margin-top: $narrow-cell;
-    margin-left: $narrow-cell;
-    width: calc(#{$narrow-cell} * 7);
+    margin-top: $cell-fluid;
+    margin-left: $cell-fluid;
+    width: $cell-fluid * 7;
 
   }
 }
 
 .mp-1 {
   @media #{$brk-mobile} {
-    height: $narrow-cell;
+    height: $cell-fluid;
   }
 }
 
 .mp-2 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 2); }
+    height: $cell-fluid * 2; }
 }
 
 .mp-3 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 3); }
+    height: $cell-fluid * 3; }
 }
 
 .mp-4 {
 @media #{$brk-mobile} {
-  height: calc(#{$narrow-cell} * 4); }
+  height: $cell-fluid * 4; }
 }
 
 .mp-5 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 5); }
+    height: $cell-fluid * 5; }
 }
 
 .mp-6 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 6); }
+    height: $cell-fluid * 6; }
 }
 
 .mp-7 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 7); }
+    height: $cell-fluid * 7; }
 }
 
 .mp-8 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 8); }
+    height: $cell-fluid * 8; }
 }
 
 .mp-9 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 9); }
+    height: $cell-fluid * 9; }
 }
 
 .mp-10 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 10); }
+    height: $cell-fluid * 10; }
 }
 
 .mp-11 {
   @media #{$brk-mobile} {
-    height: calc(#{$narrow-cell} * 11); }
+    height: $cell-fluid * 11; }
 }
 
 
@@ -792,8 +792,8 @@ h3 {
     font-size: 3vw;
     line-height: 4vw;
     //margin-top: - 8px;
-    margin-left: $narrow-cell;
-    width: calc(#{$narrow-cell} * 7);
+    margin-left: $cell-fluid;
+    width: $cell-fluid * 7;
   }
 }
 
@@ -803,18 +803,18 @@ h3 {
 
 .mob-img1 {
   //display:inline-block;
-  margin-left: $narrow-cell;
-  width: calc(#{$narrow-cell} * 2);
-  height: calc(#{$narrow-cell} * 2);
+  margin-left: $cell-fluid;
+  width: $cell-fluid * 2;
+  height: $cell-fluid * 2;
   //margin-top: $narrow-cell;
   //margin-bottom: $narrow-cell;
 }
 
 .mob-img2 {
   //display:inline-block;
-  margin-left: $narrow-cell;
-  width: calc(#{$narrow-cell} * 2);
-  height: calc(#{$narrow-cell} * 2);
+  margin-left: $cell-fluid;
+  width: $cell-fluid * 2;
+  height: $cell-fluid * 2;
   //margin-top: $narrow-cell;
   //margin-bottom: $narrow-cell;
 }
@@ -834,7 +834,7 @@ h3 {
     width: 100%;
     margin:100px 0 auto auto;
   }
-  @media #{$brk-fluid} {
+  @media #{$brk-mobile} {
     width: 100%;
     margin:50px 0 auto auto;
   }
@@ -846,7 +846,7 @@ h3 {
     margin:0 auto;
     max-width: 1280px;
   }
-  @media #{$brk-fluid} {
+  @media #{$brk-mobile} {
     max-width: 100%;
     margin-left: 50px;
     margin-right: 50px;
@@ -860,7 +860,7 @@ h3 {
     font-size:1vw;
     line-height: 2vw;
   }
-  @media #{$brk-fluid} {
+  @media #{$brk-mobile} {
     display:none;
   }
 }
@@ -894,7 +894,7 @@ h3 {
     font-size:0.8vw;
     line-height: 1.2vw;
   }
-  @media #{$brk-fluid} {
+  @media #{$brk-mobile} {
     //width:calc(#{$narrow-cell} * 7);
     font-size:1.8vw;
     line-height:2vw;

@@ -13,8 +13,7 @@ $footer-size-media: 0.5em;
 // Media query
 
 $cell: 128px;
-//cell = 128px; 11*128 = 1408
 
-$brk-fixed: '(min-width: 1408px)';
-$brk-fluid: '(max-width: 1407px)';
+$brk-fixed: '(min-width: #{$cell*11})';
+$brk-fluid: '(max-width: #{$cell*11 - 1})';
 $brk-mobile: '(max-width: 699px)';
