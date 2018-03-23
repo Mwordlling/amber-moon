@@ -10,22 +10,22 @@
     text-transform: uppercase;
     font-weight: 900;
     z-index: 1000;
-    @media #{$brk-medium} {
+    @media #{$brk-fixed} {
       font-size: 2.1vw;
     }
-    @media #{$brk-narrow}{
+    @media #{$brk-fluid}{
       font-size: 3vw;
     }
 }
 
 .social-icons {
-  @media #{$brk-medium} {
+  @media #{$brk-fixed} {
     //padding-top:20px;
     font-size:2.2vw;
     vertical-align: middle;
 
   }
-  @media #{$brk-narrow}{
+  @media #{$brk-fluid}{
     font-size: 3vw;
     vertical-align: middle;
   }

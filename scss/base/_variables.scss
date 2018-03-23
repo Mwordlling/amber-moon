@@ -1,8 +1,6 @@
-
-
 //// colors
 
-$main-text: #343434;
+//$main-text: #343434;
 $white:#fff;
 $orange: #FAA61A;
 
@@ -12,10 +10,11 @@ $orange: #FAA61A;
 $footer-size: 0.7em;
 $footer-size-media: 0.5em;
 
-
 // Media query
 
+$cell: 128px;
+//cell = 128px; 11*128 = 1408
 
-$brk-medium: '(min-width: 1280px)';
-$brk-narrow: '(max-width: 1279px)';
+$brk-fixed: '(min-width: 1408px)';
+$brk-fluid: '(max-width: 1407px)';
 $brk-mobile: '(max-width: 699px)';
