@@ -59,11 +59,11 @@ function finalmap() {
                     // Squares9: 6 -- 10
                     var squares9_layer = L.geoJSON(squares9, {
                         style: {
-                            fillColor: "black" ,
+                            fillColor: "#c1e600" ,
                             color: "red",
                             weight: 1,
                             opacity: 1,
-                            fillOpacity: 0.5,
+                            fillOpacity: 0.8,
                             stroke: 0
                         }
                     });
