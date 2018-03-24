@@ -1,9 +1,11 @@
 
 .tetris-figure {
-  display: flow-root;
+  width: 100%;
+  height: 100%;
 
   .grid-wrapper{
-    display: flow-root;
+    width: 100%;
+    height: 100%;
   }
 
   .elementary-block {
@@ -17,6 +19,6 @@
   }
 
   .elementary-block.opaque {
-    background-color: white;
+    background-color: $bg-color;
   }
 }

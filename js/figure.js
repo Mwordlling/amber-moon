@@ -7,7 +7,7 @@ function figure() {
         // , dx = 0.00543
         // , dy = 0.0033342
         , imageOffsetPc = {x: 0, y: 0}
-        , blocksize_pc = 0.11111111
+        // , blocksize_pc = 0.11111111
         , figureSize = {
             x: 3,
             y: 3
@@ -26,12 +26,11 @@ function figure() {
             var backgroundSize_pc = tileDesignSize / (designBlockSize * figureSize.x);
             console.log(inpercents(backgroundSize_pc));
             
-            
             var container = d3.select(this);
 
             container
-                .style("width", inpercents(blocksize_pc * figureSize.x))
-                .style("height", inpercents(blocksize_pc * figureSize.y))
+                // .style("width", inpercents(blocksize_pc * figureSize.x))
+                // .style("height", inpercents(blocksize_pc * figureSize.y))
 
                 .append("div")
                 .attr("class", "grid-wrapper")

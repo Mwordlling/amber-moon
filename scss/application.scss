@@ -4,6 +4,9 @@
 @import "components/grid";
 @import "components/header";
 
+$bg-color: #706f6f;
+$grid-color: #7b7a7a;
+
 @import "components/figure";
 @import "components/map";
 @import "components/finalmap";
@@ -35,8 +38,6 @@
 $cell-fixed: 128px;
 $cell-fluid: 100vw/11;
 
-$bg-color: #706f6f;
-$grid-color: #7b7a7a;
 
 html, body, div, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -58,6 +59,7 @@ img {
 
 .paragraph {
   hyphens: auto;
+  -webkit-hyphens: auto;
   word-wrap: break-word;
 }
 
