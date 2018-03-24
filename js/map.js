@@ -104,15 +104,29 @@ function map() {
 
                 map.on('zoomstart', function() { map_container.classed("transparent", false)});
                 map.on('dragstart', function() { map_container.classed("transparent", false)});
-                
+
+                function closeMap() {
+                    map_container.classed("hidden", true);
+                }
+
                 map_container.append("div")
                     .attr("class", "close-btn")
                     .attr("title", "Закрити")
-                    .on("click", function(){
-                        map_container.classed("hidden", true);
-                        console.log("map closed");
-                    })
-                
+                    .on("click", closeMap);
+
+                // close on escape
+                document.onkeydown = function(evt) {
+                    evt = evt || window.event;
+                    var isEscape = false;
+                    if ("key" in evt) {
+                        isEscape = (evt.key == "Escape" || evt.key == "Esc");
+                    } else {
+                        isEscape = (evt.keyCode == 27);
+                    }
+                    if (isEscape) {
+                        closeMap();
+                    }
+                };
             };
         });
     }

@@ -20,7 +20,8 @@ function finalmap() {
                     if (err) throw err;
 
                     map = L.map(container.node(), {
-                        minZoom: 6
+                        minZoom: 6,
+                        scrollWheelZoom: false
                     });
 
                     window.final_map = map;
