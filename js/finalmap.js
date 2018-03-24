@@ -36,7 +36,7 @@ function finalmap() {
 
 
                     // Light raster 6 - 10
-                    L.tileLayer('http://{s}.texty.org.ua/maps/t3/{z}/{x}/{y}.png', {
+                    L.tileLayer('http://{s}.texty.org.ua/maps/amber/{z}/{x}/{y}.png', {
                         maxZoom: 9
                     }).addTo(map);
 
