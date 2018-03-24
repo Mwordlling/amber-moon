@@ -1,21 +1,18 @@
 /* ======== HEADER ======== */
-.logo-buttons {
-  margin: 0 auto;
-}
 
-  .logo {
-    float: left;
-    margin-left: 20px;
-    padding-top:20px;
-    text-transform: uppercase;
-    font-weight: 900;
-    z-index: 1000;
-    @media #{$brk-fixed} {
-      font-size: 2.1vw;
-    }
-    @media #{$brk-fluid}{
-      font-size: 3vw;
-    }
+.logo {
+  float: left;
+  margin-left: 20px;
+  padding-top:20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  z-index: 1000;
+  @media #{$brk-fixed} {
+    font-size: 2.1vw;
+  }
+  @media #{$brk-fluid}{
+    font-size: 3vw;
+  }
 }
 
 .social-icons {
