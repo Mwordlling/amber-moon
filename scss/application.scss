@@ -189,9 +189,22 @@ h3 {
   }
 }
 
+.read-more {
+  font-weight: 900;
+  margin-top:50px;
+  text-align: center;
+  @media  #{$brk-fixed} {
+    font-size: 20px;
+    line-height: 1.5vw;
+  }
+  @media #{$brk-fluid} {
+    @include px2vw("font-size", 20px);
+  }
+
+}
+
 .credits {
   font-weight: 800;
-
   $span-fixed: 0.2 * $cell-fixed;
   $span-fluid: 0.2 * $cell-fluid;
   @media  #{$brk-fixed} {
@@ -225,6 +238,18 @@ h3 {
     }
   }
 }
+
+
+.small-caps {
+  font-variant: small-caps;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  @media  #{$brk-fixed} {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 
 /*------------------------------------------
 ------------ mobile version---------------*/

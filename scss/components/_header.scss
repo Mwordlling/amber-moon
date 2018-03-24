@@ -2,44 +2,44 @@
 
 .logo {
   float: left;
-  margin-left: 20px;
-  padding-top:20px;
+  width: 16%!important; //add
+  margin-top: 30px;
+  //padding-top: 20px; //add
   text-transform: uppercase;
   font-weight: 900;
   z-index: 1000;
   @media #{$brk-fixed} {
-    font-size: 2.1vw;
+    //font-size: 2.1vw;
   }
   @media #{$brk-fluid}{
-    font-size: 3vw;
+    //font-size: 3vw;
   }
 }
 
 .social-icons {
-  @media #{$brk-fixed} {
-    //padding-top:20px;
-    font-size:2.2vw;
-    vertical-align: middle;
+  font-size:2.2vw;
+  vertical-align: middle;
 
-  }
-  @media #{$brk-fluid}{
-    font-size: 3vw;
-    vertical-align: middle;
-  }
 }
 
 .fa-twitter,
-.fa-facebook {
-  background-color:rgba(187, 189, 192, 0.9);
-  margin-top:20px;
+.fa-facebook-square {
+  margin-top:30px;
   padding: 3px;
-  color: #706f6f;
   float: right;
-  margin-right: 20px;
+  //margin-right: 10px;
   cursor: pointer;
   &:hover{
     color: $orange;
   }
+}
+
+.fa-twitter {
+  color: #ffffff;
+}
+
+.fa-facebook-square {
+  color: #ffffff;
 }
 
 a {
