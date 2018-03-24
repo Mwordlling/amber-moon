@@ -1,0 +1,28 @@
+
+//
+//
+//
+//
+
+
+.wrapper-fixed {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+
+  $grid_number: 9;
+  .grid-block {
+    float: left;
+    width: percentage(1/$grid_number);
+    padding-bottom: percentage(1/$grid_number) ;
+
+    background-color: transparent;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+  }
+}
+
+.main-content {
+  display: flow-root;
+}

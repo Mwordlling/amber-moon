@@ -1,0 +1,33 @@
+
+//$block_size: 120px;
+
+.tetris-figure {
+  //width: $block_size * 3;
+  //height: $block_size * 3;
+
+  display: flow-root;
+
+  .grid-wrapper{
+    //position: relative;
+    //z-index: 10000;
+    display: flow-root;
+    //background-repeat: no-repeat;
+  }
+
+  .elementary-block {
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+
+    //width: $block_size;
+    //height: $block_size;
+  }
+
+  .elementary-block.transparent {
+    cursor: pointer;
+  }
+
+  .elementary-block.opaque {
+    background-color: white;
+  }
+}
