@@ -239,15 +239,11 @@ h3 {
   }
 }
 
-
 .small-caps {
+  font-family: 'Arial', sans-serif;
   font-variant: small-caps;
   margin-bottom: 40px;
-  letter-spacing: 1px;
-  @media  #{$brk-fixed} {
-    font-size: 18px;
-    line-height: 22px;
-  }
+  letter-spacing: 2px;
 }
 
 
