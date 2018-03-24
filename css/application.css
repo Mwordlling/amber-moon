@@ -332,6 +332,171 @@ html {
 
   .ma-to-11 {
     margin-top: 100vw; } }
+@media (max-width: 699px) {
+  .he-1 {
+    height: 10.6383vw; }
+
+  .he-2 {
+    height: 21.2766vw; }
+
+  .he-3 {
+    height: 31.91489vw; }
+
+  .he-4 {
+    height: 42.55319vw; }
+
+  .he-5 {
+    height: 53.19149vw; }
+
+  .he-6 {
+    height: 63.82979vw; }
+
+  .he-7 {
+    height: 74.46809vw; }
+
+  .he-8 {
+    height: 85.10638vw; }
+
+  .he-9 {
+    height: 95.74468vw; }
+
+  .he-10 {
+    height: 106.38298vw; }
+
+  .he-11 {
+    height: 117.02128vw; }
+
+  .wi-1 {
+    width: 10.6383vw; }
+
+  .wi-2 {
+    width: 21.2766vw; }
+
+  .wi-3 {
+    width: 31.91489vw; }
+
+  .wi-4 {
+    width: 42.55319vw; }
+
+  .wi-5 {
+    width: 53.19149vw; }
+
+  .wi-6 {
+    width: 63.82979vw; }
+
+  .wi-7 {
+    width: 74.46809vw; }
+
+  .wi-8 {
+    width: 85.10638vw; }
+
+  .wi-9 {
+    width: 95.74468vw; }
+
+  .wi-10 {
+    width: 106.38298vw; }
+
+  .wi-11 {
+    width: 117.02128vw; }
+
+  .le-1 {
+    left: 10.6383vw; }
+
+  .le-2 {
+    left: 21.2766vw; }
+
+  .le-3 {
+    left: 31.91489vw; }
+
+  .le-4 {
+    left: 42.55319vw; }
+
+  .le-5 {
+    left: 53.19149vw; }
+
+  .le-6 {
+    left: 63.82979vw; }
+
+  .le-7 {
+    left: 74.46809vw; }
+
+  .le-8 {
+    left: 85.10638vw; }
+
+  .le-9 {
+    left: 95.74468vw; }
+
+  .le-10 {
+    left: 106.38298vw; }
+
+  .le-11 {
+    left: 117.02128vw; }
+
+  .to-1 {
+    top: 10.6383vw; }
+
+  .to-2 {
+    top: 21.2766vw; }
+
+  .to-3 {
+    top: 31.91489vw; }
+
+  .to-4 {
+    top: 42.55319vw; }
+
+  .to-5 {
+    top: 53.19149vw; }
+
+  .to-6 {
+    top: 63.82979vw; }
+
+  .to-7 {
+    top: 74.46809vw; }
+
+  .to-8 {
+    top: 85.10638vw; }
+
+  .to-9 {
+    top: 95.74468vw; }
+
+  .to-10 {
+    top: 106.38298vw; }
+
+  .to-11 {
+    top: 117.02128vw; }
+
+  .ma-to-1 {
+    margin-top: 10.6383vw; }
+
+  .ma-to-2 {
+    margin-top: 21.2766vw; }
+
+  .ma-to-3 {
+    margin-top: 31.91489vw; }
+
+  .ma-to-4 {
+    margin-top: 42.55319vw; }
+
+  .ma-to-5 {
+    margin-top: 53.19149vw; }
+
+  .ma-to-6 {
+    margin-top: 63.82979vw; }
+
+  .ma-to-7 {
+    margin-top: 74.46809vw; }
+
+  .ma-to-8 {
+    margin-top: 85.10638vw; }
+
+  .ma-to-9 {
+    margin-top: 95.74468vw; }
+
+  .ma-to-10 {
+    margin-top: 106.38298vw; }
+
+  .ma-to-11 {
+    margin-top: 117.02128vw; } }
 .roww {
   width: 100%;
   display: block;
@@ -479,6 +644,12 @@ img {
     margin-right: 9.09091vw;
     width: 81.81818vw;
     background-size: 9.09091vw 9.09091vw; } }
+@media (max-width: 699px) {
+  .main-content {
+    margin-left: 2.12766vw;
+    margin-right: 2.12766vw;
+    width: 95.74468vw;
+    background-size: 10.6383vw 10.6383vw; } }
 
 .main-gridlines {
   border-right: solid #7b7a7a 1px;

@@ -97,6 +97,13 @@ img {
     width: $cell-fluid * 9;
     background-size: $cell-fluid $cell-fluid;
   }
+
+  @media #{$brk-mobile}{
+    margin-left: $cell-mobile * 0.2;
+    margin-right: $cell-mobile * 0.2;
+    width: $cell-mobile * 9;
+    background-size: $cell-mobile $cell-mobile;
+  }
 }
 
 .main-gridlines {
