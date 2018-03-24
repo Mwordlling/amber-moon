@@ -4,16 +4,33 @@
 @import "components/grid";
 @import "components/header";
 
-.paragraph {
-  hyphens: auto;
-  word-wrap: break-word;
-}
+@import "components/figure";
+@import "components/map";
+@import "components/finalmap";
 
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+
+/// Штука яка робить сітку
+/// Поки що я її не юзаю, замість неї linear-gradient
+
+//.grid-block {
+//  float: left;
+//
+//  @media #{$brk-fixed} {
+//    width: $cell-fixed;
+//    height: $cell-fixed;
+//  }
+//
+//  @media #{$brk-fluid}{
+//    width: $cell-fluid;
+//    height: $cell-fluid;
+//  }
+//
+//  background-color: transparent;
+//  border-left: 1px solid #eee;
+//  border-top: 1px solid #eee;
+//}
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
 $cell-fixed: 128px;
 $cell-fluid: 100vw/11;
@@ -31,6 +48,17 @@ body {
   font-family: "Anonymous Pro", sans-serif!important;
   color:white;
   background-color: $bg-color;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.paragraph {
+  hyphens: auto;
+  word-wrap: break-word;
 }
 
 .link {
@@ -62,12 +90,6 @@ body {
 
   background-image: linear-gradient(to right, $grid-color 1px, transparent 1px),
   linear-gradient(to bottom, $grid-color 1px, $bg-color 1px);
-}
-
-.social-icons {
-  //display:flex;
-  //flex-direction: row;
-  //justify-content: space-between;
 }
 
 h1 {
