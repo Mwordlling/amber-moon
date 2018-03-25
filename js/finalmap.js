@@ -36,7 +36,7 @@ function finalmap() {
 
 
                     // Light raster 6 - 10
-                    L.tileLayer('http://{s}.texty.org.ua/maps/t3/{z}/{x}/{y}.png', {
+                    L.tileLayer('http://{s}.texty.org.ua/maps/amber/{z}/{x}/{y}.png', {
                         maxZoom: 9
                     }).addTo(map);
 
@@ -59,11 +59,11 @@ function finalmap() {
                     // Squares9: 6 -- 10
                     var squares9_layer = L.geoJSON(squares9, {
                         style: {
-                            fillColor: "black" ,
+                            fillColor: "#c1e600" ,
                             color: "red",
                             weight: 1,
                             opacity: 1,
-                            fillOpacity: 0.5,
+                            fillOpacity: 0.8,
                             stroke: 0
                         }
                     });
