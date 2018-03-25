@@ -13,7 +13,7 @@ function figure() {
             y: 3
         }
 
-        , designBlockSize = 1280 / 9
+        , designBlockSize = 128
         , tileOriginalSize = 1000
         , tileDesignSize = 500
         
