@@ -242,6 +242,7 @@ $cell-mobile: 100vw/9.4;
   @include height_mobile(9);
   @include height_mobile(10);
   @include height_mobile(11);
+  @include height_mobile(12);
 
   @include width_mobile(1);
   @include width_mobile(2);
@@ -302,6 +303,12 @@ $cell-mobile: 100vw/9.4;
 .block {
   display: block;
   position: absolute;
+
+
+  //todo TEMP REMOVE
+  @media #{$brk-mobile} {
+    //border:1px solid yellow;
+  }
 }
 
 
