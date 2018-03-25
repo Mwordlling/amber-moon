@@ -635,11 +635,12 @@ img {
   hyphens: auto;
   -webkit-hyphens: auto;
   word-wrap: break-word; }
+  @media (max-width: 699px) {
+    .paragraph {
+      hyphens: none;
+      -webkit-hyphens: none;
+      word-wrap: normal; } }
 
-@media (max-width: 699px) {
-  hyphens: none;
-  -webkit-hyphens: none;
-  word-wrap: normal; }
 .link {
   border-bottom: 1px dashed white; }
 
@@ -676,6 +677,9 @@ h1 {
   @media (max-width: 1407px) {
     h1 {
       font-size: 9.23295vw; } }
+  @media (max-width: 699px) {
+    h1 {
+      font-size: 10.5vw; } }
 
 h3 {
   text-transform: uppercase;
@@ -688,6 +692,9 @@ h3 {
   @media (max-width: 1407px) {
     h3 {
       font-size: 1.98864vw; } }
+  @media (max-width: 699px) {
+    h3 {
+      font-size: 3.6vw; } }
 
 .top-margin {
   margin-top: 40px; }
@@ -707,6 +714,9 @@ h3 {
   @media (max-width: 1407px) {
     .paragraph {
       font-size: 1.42045vw; } }
+  @media (max-width: 699px) {
+    .paragraph {
+      font-size: 3.6vw; } }
 
 .incut {
   font-weight: 900;
@@ -718,6 +728,9 @@ h3 {
   @media (max-width: 1407px) {
     .incut {
       font-size: 2.13068vw; } }
+  @media (max-width: 699px) {
+    .incut {
+      font-size: 3.6vw; } }
 
 .read-more {
   font-weight: 900;
@@ -730,6 +743,9 @@ h3 {
   @media (max-width: 1407px) {
     .read-more {
       font-size: 1.42045vw; } }
+  @media (max-width: 699px) {
+    .read-more {
+      font-size: 2.3vw; } }
 
 .credits {
   font-weight: 800;
@@ -756,7 +772,7 @@ h3 {
         padding-left: 1.81818vw; } }
   @media (max-width: 699px) {
     .credits {
-      font-size: 1.13636vw; }
+      font-size: 1.3vw; }
       .credits .credits-job {
         width: 37.23404vw;
         padding-right: 2.12766vw; }

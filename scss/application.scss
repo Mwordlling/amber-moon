@@ -82,13 +82,14 @@ img {
   hyphens: auto;
   -webkit-hyphens: auto;
   word-wrap: break-word;
+
+  @media #{$brk-mobile} {
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-wrap: normal;
+  }
 }
 
-@media #{$brk-mobile} {
-  hyphens: none;
-  -webkit-hyphens: none;
-  word-wrap: normal;
-}
 
 .link {
   border-bottom: 1px dashed white;
@@ -136,6 +137,10 @@ h1 {
   @media #{$brk-fluid}  {
     @include px2vw("font-size", 130px);
   }
+
+  @media #{$brk-mobile}  {
+    font-size: 10.5vw;
+  }
 }
 
 h3 {
@@ -150,6 +155,10 @@ h3 {
 
   @media #{$brk-fluid} {
     @include px2vw("font-size", 28px)
+  }
+
+  @media #{$brk-mobile} {
+    font-size: 3.6vw;
   }
 }
 
@@ -175,6 +184,10 @@ h3 {
   @media #{$brk-fluid} {
     @include px2vw("font-size", 20px);
   }
+
+  @media #{$brk-mobile} {
+    font-size: 3.6vw;
+  }
 }
 
 .incut {
@@ -189,6 +202,10 @@ h3 {
   @media #{$brk-fluid} {
     @include px2vw("font-size", 30px);
   }
+
+  @media #{$brk-mobile} {
+    font-size: 3.6vw;
+  }
 }
 
 .read-more {
@@ -202,6 +219,10 @@ h3 {
   @media #{$brk-fluid} {
     @include px2vw("font-size", 20px);
   }
+  @media #{$brk-mobile}  {
+    font-size: 2.3vw;
+  }
+
 
 }
 
@@ -242,7 +263,7 @@ h3 {
   }
 
   @media #{$brk-mobile}  {
-    @include px2vw("font-size", 16px);
+    font-size: 1.3vw;
 
     .credits-job {
       width: $cell-mobile * 3.5;
