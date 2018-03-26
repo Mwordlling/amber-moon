@@ -16,7 +16,7 @@ function map() {
         , map
         ;
 
-    var BING_KEY = 'An6TywDiIaInXfO2VzpkIciUwy_L0r9kJnK6RqFOaii8Ig3HRwjQvP7XQyXgO9co';
+    var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L';
 
 
     function my(selection) {
