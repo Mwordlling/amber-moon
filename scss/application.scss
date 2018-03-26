@@ -471,6 +471,77 @@ h3 {
   font-size:1.2em;
 }
 
+.click_me {
+  width:40%;
+  position:absolute;
+  //text-align: right;
+  color:white;
+  top: 2%;
+  left:30%;
+  font-weight: 800;
+  -webkit-animation: linear infinite alternate;
+  -webkit-animation-name: change_text;
+  -webkit-animation-duration: 5s;
+  overflow: hidden;
+}
+
+$steps: 50;
+
+@-webkit-keyframes change_text {
+  @for $i from 1 to $steps {
+    $per: 100% / $steps * $i;
+    $weight: (
+            100,
+            200,
+            300,
+            400,
+            500,
+            600,
+            700
+    );
+    $style: (
+            normal,
+            bold,
+            normal,
+            bold
+    );
+    $decor: (
+            none,
+            underline,
+            none,
+            underline,
+            none,
+            underline,
+            none
+    );
+    $trans: (
+            lowercase,
+            uppercase,
+            lowercase,
+            uppercase,
+            lowercase,
+            uppercase,
+            lowercase,
+            uppercase,
+            lowercase,
+            uppercase,
+            lowercase
+    );
+
+    $arrayW: random(7);
+    $arrayS: random(4);
+    $arrayD: random(7);
+    $arrayT: random(11);
+
+    #{$per} {
+      font-weight: nth($weight, $arrayW);
+      font-style: nth($style, $arrayS);
+      text-decoration: nth($decor, $arrayD);
+      text-transform: nth($trans, $arrayT);
+    }
+  }
+}
+
 
 
 

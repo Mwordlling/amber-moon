@@ -750,4 +750,263 @@ h3 {
   color: #FAA61A !important;
   font-size: 1.2em; }
 
+.click_me {
+  width: 40%;
+  position: absolute;
+  color: white;
+  top: 2%;
+  left: 30%;
+  font-weight: 800;
+  -webkit-animation: linear infinite alternate;
+  -webkit-animation-name: change_text;
+  -webkit-animation-duration: 5s;
+  overflow: hidden; }
+
+@-webkit-keyframes change_text {
+  2% {
+    font-weight: 500;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  4% {
+    font-weight: 200;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  6% {
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: lowercase; }
+  8% {
+    font-weight: 500;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  10% {
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  12% {
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  14% {
+    font-weight: 300;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  16% {
+    font-weight: 600;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  18% {
+    font-weight: 700;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  20% {
+    font-weight: 300;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  22% {
+    font-weight: 200;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: lowercase; }
+  24% {
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  26% {
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase; }
+  28% {
+    font-weight: 600;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  30% {
+    font-weight: 200;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  32% {
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase; }
+  34% {
+    font-weight: 200;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  36% {
+    font-weight: 100;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  38% {
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  40% {
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  42% {
+    font-weight: 200;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  44% {
+    font-weight: 500;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: uppercase; }
+  46% {
+    font-weight: 700;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  48% {
+    font-weight: 100;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  50% {
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase; }
+  52% {
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  54% {
+    font-weight: 100;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  56% {
+    font-weight: 400;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  58% {
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase; }
+  60% {
+    font-weight: 600;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  62% {
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  64% {
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: lowercase; }
+  66% {
+    font-weight: 700;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  68% {
+    font-weight: 300;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  70% {
+    font-weight: 600;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: uppercase; }
+  72% {
+    font-weight: 100;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: uppercase; }
+  74% {
+    font-weight: 200;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: lowercase; }
+  76% {
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: lowercase; }
+  78% {
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  80% {
+    font-weight: 200;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  82% {
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: lowercase; }
+  84% {
+    font-weight: 100;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  86% {
+    font-weight: 700;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  88% {
+    font-weight: 400;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: lowercase; }
+  90% {
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  92% {
+    font-weight: 700;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; }
+  94% {
+    font-weight: 700;
+    font-style: bold;
+    text-decoration: none;
+    text-transform: uppercase; }
+  96% {
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase; }
+  98% {
+    font-weight: 600;
+    font-style: bold;
+    text-decoration: underline;
+    text-transform: uppercase; } }
+
 /*# sourceMappingURL=application.css.map */
