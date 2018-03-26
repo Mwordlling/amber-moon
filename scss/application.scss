@@ -372,90 +372,82 @@ h3 {
 //}
 
 .click_me {
-  width:60%;
-  text-align: center;
+  width:100px;
+  word-break: keep-all;
+  text-align: right;
   position:absolute;
   color:white;
-  top: 2%;
-  left:20%;
+  top: 10%;
+  right:102%;
   font-weight: 800;
-  -webkit-animation: linear infinite alternate;
-  -webkit-animation-name: change_text;
-  -webkit-animation-duration: 5s;
-  overflow: hidden;
+  font-size:12px;
 }
 
-.click_me_M {
-  width:80%;
-  text-align: center;
-  position:absolute;
-  color:white;
-  top: 2%;
-  left:10%;
-  font-weight: 800;
-  -webkit-animation: linear infinite alternate;
-  -webkit-animation-name: change_text;
-  -webkit-animation-duration: 5s;
-  overflow: hidden;
+.click_me i {
+  margin-top: -1px;
+  vertical-align: middle;
+  font-weight: 100!important;
+  font-size:30px;
 }
 
 
 
-$steps: 50;
-@-webkit-keyframes change_text {
-  @for $i from 1 to $steps {
-    $per: 100% / $steps * $i;
-    $weight: (
-            100,
-            200,
-            300,
-            400,
-            500,
-            600,
-            700
-    );
-    $style: (
-            normal,
-            bold,
-            normal,
-            bold
-    );
-    $decor: (
-            none,
-            underline,
-            none,
-            underline,
-            none,
-            underline,
-            none
-    );
-    $trans: (
-            lowercase,
-            uppercase,
-            lowercase,
-            uppercase,
-            lowercase,
-            uppercase,
-            lowercase,
-            uppercase,
-            lowercase,
-            uppercase,
-            lowercase
-    );
-
-    $arrayW: random(7);
-    $arrayS: random(4);
-    $arrayD: random(7);
-    $arrayT: random(11);
-
-    #{$per} {
-      font-weight: nth($weight, $arrayW);
-      font-style: nth($style, $arrayS);
-      text-decoration: nth($decor, $arrayD);
-      text-transform: nth($trans, $arrayT);
-    }
-  }
-}
+/*------------ анімація для click me --------- */
+//$steps: 50;
+//@-webkit-keyframes change_text {
+//  @for $i from 1 to $steps {
+//    $per: 100% / $steps * $i;
+//    $weight: (
+//            100,
+//            200,
+//            300,
+//            400,
+//            500,
+//            600,
+//            700
+//    );
+//    $style: (
+//            normal,
+//            bold,
+//            normal,
+//            bold
+//    );
+//    $decor: (
+//            none,
+//            underline,
+//            none,
+//            underline,
+//            none,
+//            underline,
+//            none
+//    );
+//    $trans: (
+//            lowercase,
+//            uppercase,
+//            lowercase,
+//            uppercase,
+//            lowercase,
+//            uppercase,
+//            lowercase,
+//            uppercase,
+//            lowercase,
+//            uppercase,
+//            lowercase
+//    );
+//
+//    $arrayW: random(7);
+//    $arrayS: random(4);
+//    $arrayD: random(7);
+//    $arrayT: random(11);
+//
+//    #{$per} {
+//      font-weight: nth($weight, $arrayW);
+//      font-style: nth($style, $arrayS);
+//      text-decoration: nth($decor, $arrayD);
+//      text-transform: nth($trans, $arrayT);
+//    }
+//  }
+//}
 
 
 
