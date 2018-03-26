@@ -15,6 +15,7 @@ function map() {
         , imageOffsetPc = {x: 0, y: 0}
         , backgroundSize_pc
         , tileOriginalSize = 1000
+        , tileOriginalZoom = 18
         , map
         ;
 
@@ -41,7 +42,7 @@ function map() {
                 // розмір в пікселях картинки на фоні
                 var imgsize = rect.width * backgroundSize_pc;
                 
-                var zoomLevel = 18 + Math.log2(imgsize / tileOriginalSize);
+                var zoomLevel = tileOriginalZoom + Math.log2(imgsize / tileOriginalSize);
 
                 console.log(zoomLevel);
                 // для початку створимо карту, центруємо по центру картинки, просто щоб приблизно переміститись на ту територію

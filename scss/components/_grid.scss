@@ -2,6 +2,7 @@
 
 $cell-fixed: 128px;
 $cell-fluid: 100vw/11;
+$cell-mobile: 100vw/9.4;
 
 
 // Width and height
@@ -28,6 +29,18 @@ $cell-fluid: 100vw/11;
     width: $cell-fluid * $size;
   }
 }
+
+@mixin height_mobile($size) {
+  .he-#{$size} {
+    height: $cell-mobile * $size;
+  }
+}
+
+@mixin width_mobile($size) {
+  .wi-#{$size} {
+    width: $cell-mobile * $size;
+  }
+}
 //////////////////////
 
 // Left position
@@ -43,17 +56,28 @@ $cell-fluid: 100vw/11;
   }
 }
 
-// Left position
+@mixin left_mobile($size) {
+  .le-#{$size} {
+    left: $cell-mobile * $size;
+  }
+}
+
+// Top position
 @mixin top_fluid($size) {
   .to-#{$size} {
     top: $cell-fluid * $size;
   }
 }
 
-// Top position
 @mixin top_fixed($size) {
   .to-#{$size} {
     top: $cell-fixed * $size;
+  }
+}
+
+@mixin top_mobile($size) {
+  .to-#{$size} {
+    top: $cell-mobile * $size;
   }
 }
 
@@ -67,6 +91,12 @@ $cell-fluid: 100vw/11;
 @mixin margin_top_fluid($size) {
   .ma-to-#{$size} {
     margin-top: $cell-fluid * $size;
+  }
+}
+
+@mixin margin_top_mobile($size) {
+  .ma-to-#{$size} {
+    margin-top: $cell-mobile * $size;
   }
 }
 
@@ -200,6 +230,70 @@ $cell-fluid: 100vw/11;
   @include margin_top_fluid(11);
 }
 
+@media #{$brk-mobile} {
+  @include height_mobile(1);
+  @include height_mobile(2);
+  @include height_mobile(3);
+  @include height_mobile(4);
+  @include height_mobile(5);
+  @include height_mobile(6);
+  @include height_mobile(7);
+  @include height_mobile(8);
+  @include height_mobile(9);
+  @include height_mobile(10);
+  @include height_mobile(11);
+  @include height_mobile(12);
+
+  @include width_mobile(1);
+  @include width_mobile(2);
+  @include width_mobile(3);
+  @include width_mobile(4);
+  @include width_mobile(5);
+  @include width_mobile(6);
+  @include width_mobile(7);
+  @include width_mobile(8);
+  @include width_mobile(9);
+  @include width_mobile(10);
+  @include width_mobile(11);
+
+  @include left_mobile(1);
+  @include left_mobile(2);
+  @include left_mobile(3);
+  @include left_mobile(4);
+  @include left_mobile(5);
+  @include left_mobile(6);
+  @include left_mobile(7);
+  @include left_mobile(8);
+  @include left_mobile(9);
+  @include left_mobile(10);
+  @include left_mobile(11);
+
+  @include top_mobile(1);
+  @include top_mobile(2);
+  @include top_mobile(3);
+  @include top_mobile(4);
+  @include top_mobile(5);
+  @include top_mobile(6);
+  @include top_mobile(7);
+  @include top_mobile(8);
+  @include top_mobile(9);
+  @include top_mobile(10);
+  @include top_mobile(11);
+
+  @include margin_top_mobile(1);
+  @include margin_top_mobile(2);
+  @include margin_top_mobile(3);
+  @include margin_top_mobile(4);
+  @include margin_top_mobile(5);
+  @include margin_top_mobile(6);
+  @include margin_top_mobile(7);
+  @include margin_top_mobile(8);
+  @include margin_top_mobile(9);
+  @include margin_top_mobile(10);
+  @include margin_top_mobile(11);
+}
+
+
 .roww {
   width: 100%;
   display:block;
@@ -209,6 +303,12 @@ $cell-fluid: 100vw/11;
 .block {
   display: block;
   position: absolute;
+
+
+  //todo TEMP REMOVE
+  @media #{$brk-mobile} {
+    //border:1px solid yellow;
+  }
 }
 
 

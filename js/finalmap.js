@@ -36,12 +36,25 @@ function finalmap() {
 
 
                     // Light raster 6 - 10
-                    L.tileLayer('http://{s}.texty.org.ua/maps/t3/{z}/{x}/{y}.png', {
+                    L.tileLayer('http://{s}.texty.org.ua/maps/amber/{z}/{x}/{y}.png', {
                         maxZoom: 9
                     }).addTo(map);
 
                     // map.setView([51.081851400000005, 27.3154423], 8, true);
                     map.fitBounds([[50.25022980000001,25.4251606],[51.913472999999996,29.205724]]);
+
+                    // Squares9: 6 -- 10
+                    var squares9_layer = L.geoJSON(squares9, {
+                        style: {
+                            fillColor: "#c1e600" ,
+                            color: "red",
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 0.8,
+                            stroke: 0
+                        }
+                    });
+                    squares9_layer.addTo(map);
 
                     // Squares1: 10+
                     var squares1_layer = L.geoJSON(squares1, {
@@ -56,24 +69,16 @@ function finalmap() {
                     });
                     squares1_layer.addTo(map);
 
-                    // Squares9: 6 -- 10
-                    var squares9_layer = L.geoJSON(squares9, {
-                        style: {
-                            fillColor: "black" ,
-                            color: "red",
-                            weight: 1,
-                            opacity: 1,
-                            fillOpacity: 0.5,
-                            stroke: 0
-                        }
-                    });
-                    squares9_layer.addTo(map);
-
                     // Для всіх НЕ TileLayer треба прописувати minZoom і maxZoom через хаки
                     map.on("zoomend", onZoomEnd);
                     onZoomEnd();
 
                     function onZoomEnd() {
+                        function removeAll() {
+                            map.removeLayer(squares1_layer);
+                            map.removeLayer(squares9_layer);
+                        }
+
                         var z = map.getZoom();
 
                         if (z < 16) {
@@ -88,6 +93,7 @@ function finalmap() {
                             squares9_layer.addTo(map);
                             squares1_layer.removeFrom(map);
                         } else if (z >= 10 &&  z < 12) {
+                            removeAll();
                             squares9_layer.addTo(map);
                             squares1_layer.addTo(map);
                         } else {
