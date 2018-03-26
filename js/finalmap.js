@@ -4,7 +4,7 @@ function finalmap() {
         map
         ;
 
-    var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L';
+    var BING_KEY = '7iwrppbVdz0lGpikbqd8~xJvG4G_xd7HrgqwcYlBIbA~AtniWbKOD5OuqxuBx-IIWRSI3SNjKx82lcX-YWJlfgKKSdxl_rgRtSdONbogryBN';
 
     function my(selection) {
 
