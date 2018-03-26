@@ -374,7 +374,6 @@ h3 {
 .click_me {
   width:40%;
   position:absolute;
-  //text-align: right;
   color:white;
   top: 2%;
   left:30%;
@@ -386,7 +385,6 @@ h3 {
 }
 
 $steps: 50;
-
 @-webkit-keyframes change_text {
   @for $i from 1 to $steps {
     $per: 100% / $steps * $i;
