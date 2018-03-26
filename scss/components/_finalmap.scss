@@ -7,6 +7,11 @@
   left: 0;
   width: 100%;
   height: 90vh;
+
+  @media #{$brk-mobile}  {
+    height: 85vh;
+  }
+
   //z-index: 1000;
   //
   //svg {
