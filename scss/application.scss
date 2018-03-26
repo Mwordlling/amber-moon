@@ -375,23 +375,23 @@ h3 {
 //}
 
 .click_me {
+  position:absolute;
+  top: 10%;
+  right:100%;
+
+}
+
+p.click_me {
   width:100px;
   word-break: keep-all;
   text-align: right;
   position:absolute;
   color:white;
   top: 10%;
-  right:102%;
-  font-weight: 800;
-  font-size:12px;
+  right:105%;
+  font-size:16px;
 }
 
-.click_me i {
-  margin-top: -1px;
-  vertical-align: middle;
-  font-weight: 100!important;
-  font-size:30px;
-}
 
 
 
