@@ -372,17 +372,34 @@ h3 {
 //}
 
 .click_me {
-  width:40%;
+  width:60%;
+  text-align: center;
   position:absolute;
   color:white;
   top: 2%;
-  left:30%;
+  left:20%;
   font-weight: 800;
   -webkit-animation: linear infinite alternate;
   -webkit-animation-name: change_text;
   -webkit-animation-duration: 5s;
   overflow: hidden;
 }
+
+.click_me_M {
+  width:80%;
+  text-align: center;
+  position:absolute;
+  color:white;
+  top: 2%;
+  left:10%;
+  font-weight: 800;
+  -webkit-animation: linear infinite alternate;
+  -webkit-animation-name: change_text;
+  -webkit-animation-duration: 5s;
+  overflow: hidden;
+}
+
+
 
 $steps: 50;
 @-webkit-keyframes change_text {
