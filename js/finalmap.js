@@ -4,7 +4,7 @@ function finalmap() {
         map
         ;
 
-    var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L';
+    var BING_KEY = 'An6TywDiIaInXfO2VzpkIciUwy_L0r9kJnK6RqFOaii8Ig3HRwjQvP7XQyXgO9co';
 
     function my(selection) {
 
@@ -12,11 +12,9 @@ function finalmap() {
 
             var container = d3.select(this);
             
-            d3.queue()
-                .defer(d3.csv, "coordinates.csv")
-                .defer(d3.json, "data/squares.1.geojson")
-                .defer(d3.json, "data/squares.9.geojson")
-                .await(function(err, points, squares1, squares9) {
+            req .need("squares1")
+                .need("squares9")
+                .ready(function(err, squares1, squares9){
                     if (err) throw err;
 
                     map = L.map(container.node(), {
@@ -25,7 +23,7 @@ function finalmap() {
                     });
 
                     window.final_map = map;
-    
+
                     // BING 11+
                     var bingLayer = L.tileLayer.bing({
                         bingMapsKey: BING_KEY,
@@ -101,7 +99,7 @@ function finalmap() {
                             squares9_layer.removeFrom(map);
                         }
                     }
-                });
+            });
 
 
         });

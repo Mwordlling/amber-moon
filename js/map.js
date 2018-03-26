@@ -9,9 +9,6 @@ function map() {
         , hull
         , image
         , img_center
-    // , dx = 0.00543
-    // , dy = 0.0033342
-    //     , imageOffset = {x: 0, y: 0}
         , imageOffsetPc = {x: 0, y: 0}
         , backgroundSize_pc
         , tileOriginalSize = 1000
@@ -19,7 +16,7 @@ function map() {
         , map
         ;
 
-    var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L';
+    var BING_KEY = 'An6TywDiIaInXfO2VzpkIciUwy_L0r9kJnK6RqFOaii8Ig3HRwjQvP7XQyXgO9co';
 
 
     function my(selection) {
@@ -52,10 +49,12 @@ function map() {
 
                 if (firstRender) {
                     map = L.map(map_container.node(), {
-                        // trackResize: true
                         zoomSnap: 0.01
                     });
-                    L.tileLayer.bing(BING_KEY).addTo(map);
+                    L.tileLayer.bing({
+                        bingMapsKey: BING_KEY,
+                        imagerySet: "AerialWithLabels"
+                    }).addTo(map);
                 }
 
                 map.setView(img_center, zoomLevel, true);
@@ -128,6 +127,82 @@ function map() {
                         closeMap();
                     }
                 };
+
+                req .need("squares1")
+                    .need("squares9")
+                    .ready(function(err, squares1, squares9) {
+                        if (err) throw err;
+
+                        var squares9_layer = L.geoJSON(squares9, {
+                            style: {
+                                fillColor: "#c1e600" ,
+                                color: "red",
+                                weight: 1,
+                                opacity: 1,
+                                fillOpacity: 0.8,
+                                stroke: 0
+                            }
+                        });
+
+                        // Squares1: 10+
+                        var squares1_layer = L.geoJSON(squares1, {
+                            style: {
+                                fillColor: "black" ,
+                                color: "#98c336",
+                                weight: 1,
+                                opacity: 1,
+                                fillOpacity: 0.5,
+                                stroke: 1
+                            }
+                        });
+
+                        map.on("zoomend", onZoomEnd);
+                        onZoomEnd();
+
+                        function onZoomEnd() {
+                            function removeAll() {
+                                map.removeLayer(squares1_layer);
+                                map.removeLayer(squares9_layer);
+                            }
+
+                            var z = map.getZoom();
+
+                            if (z > zoomLevel - 1) {
+                                removeAll();
+                                return;
+                            }
+
+                            if (z < 16) {
+                                squares1_layer.setStyle({fillOpacity: 0.5})
+                            } else if (z >= 16 && z < 17) {
+                                squares1_layer.setStyle({fillOpacity: 0.3})
+                            } else {
+                                squares1_layer.setStyle({fillOpacity: 0})
+                            }
+
+                            if (z < 10 ) {
+                                squares9_layer.addTo(map);
+                                squares1_layer.removeFrom(map);
+                            } else if (z >= 10 &&  z < 12) {
+                                removeAll();
+                                squares9_layer.addTo(map);
+                                squares1_layer.addTo(map);
+                            } else {
+                                squares1_layer.addTo(map);
+                                squares9_layer.removeFrom(map);
+                            }
+                        }
+                    });
+
+                        // Squares9: 6 -- 10
+
+                map.on('zoomstart', onInteraction);
+                map.on('dragstart', onInteraction);
+
+                function onInteraction() {
+                    map_container.classed("transparent", false);
+                }
+
             };
         });
     }

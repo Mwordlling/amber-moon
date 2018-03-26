@@ -1,3 +1,11 @@
+req.reg("squares1", d3.json, "data/squares.1.geojson");
+req.reg("squares9", d3.json, "data/squares.9.geojson");
+
+req
+    .need("squares1")
+    .need("squares9")
+    .ready(function(){});
+
 setUpFigure("#figure1", {
     figureSize: {x: 2, y: 2},
     gridString: "00 00",
