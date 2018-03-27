@@ -171,9 +171,6 @@ setUpFigure("#figureM9", {
     imageOffsetPc: {x: 0.3, y: 0.4}
 });
 
-// 'selected/500/51.573971199999995_27.129568000000003_05_Oct_2015_GMT.jpg'
-// 'selected/500/51.3361602_26.558144000000002_09_Mar_2015_GMT.jpg'
-
 
 d3.select("#finalmap").call(finalmap());
 

@@ -163,10 +163,6 @@ h3 {
   }
 }
 
-.top-margin {
-  margin-top: 40px;
-}
-
 .bottom-margin {
   @media #{$brk-fixed} {
     margin-bottom: 31px;
@@ -211,7 +207,6 @@ h3 {
 
 .read-more {
   font-weight: 900;
-  margin-top:50px;
   text-align: center;
   line-height: 1.4;
   letter-spacing: 0.1em;
@@ -266,7 +261,7 @@ h3 {
   }
 
   @media #{$brk-mobile}  {
-    font-size: 1.3vw;
+    font-size: 1.6vw;
 
     .credits-job {
       width: $cell-mobile * 3.5;
@@ -327,105 +322,13 @@ h3 {
   }
 
   path {
-      stroke-width: 2px;
-    //@media  #{$brk-fixed} {
-    //  stroke-width: 2px;
-    //}
-    //@media #{$brk-fluid} {
-    //  stroke-width: 2px;
-    //}
+    stroke-width: 2px;
+
     @media #{$brk-mobile}  {
       stroke-width: 6px;
     }
   }
 }
-
-
-////footer
-//#footer {
-//  margin:50px 0 auto auto;
-//  position: relative;
-//  bottom: 0;
-//  background-color: #080808;
-//  text-align: left;
-//  display: block;
-//
-//  @media #{$brk-fixed} {
-//    width: 100%;
-//    margin:100px 0 auto auto;
-//  }
-//}
-
-//
-//#footer-content {
-//  @media #{$brk-fixed} {
-//    margin:0 auto;
-//    max-width: 1280px;
-//  }
-//
-//  //todo check
-//  @media #{$brk-mobile} {
-//    max-width: 100%;
-//    margin-left: 50px;
-//    margin-right: 50px;
-//  }
-//}
-//
-//.links li {
-//  color:$white;
-//  @media #{$brk-fixed} {
-//    margin-left: 100px;
-//    font-size:1vw;
-//    line-height: 2vw;
-//  }
-//
-//  //todo check
-//  @media #{$brk-mobile} {
-//    display:none;
-//  }
-//}
-//
-//.copyright {
-//  float: left;
-//  margin-left: 50px;
-//  margin-top: 20px;
-//  font-size:1vw;
-//  line-height: 1.4vw;
-//  color: $white;
-//
-//  @media #{$brk-fixed} {
-//    font-size:1vw;
-//    line-height: 1.4vw;
-//  }
-//  @media #{$brk-fluid} {
-//    font-size:1.8vw;
-//    line-height:2vw;
-//  }
-//}
-
-//.copying-info {
-//  margin-left: 50px;
-//  padding-top: 10px;
-//  padding-bottom: 20px;
-//  color: #ffffff;
-//
-//  @media #{$brk-fixed} {
-//    //width:calc(#{$cell} * 7);
-//    font-size:0.8vw;
-//    line-height: 1.2vw;
-//  }
-//  //todo check
-//  @media #{$brk-mobile} {
-//    font-size:1.8vw;
-//    line-height:2vw;
-//  }
-//}
-
-//.support-site:link,
-//.support-site:visited {
-//  color:$orange!important;
-//  font-size:1.2em;
-//}
 
 .click_me {
   position:absolute;
@@ -444,67 +347,6 @@ p.click_me {
   right:115%;
   font-size:16px;
 }
-
-
-
-
-/*------------ анімація для click me --------- */
-//$steps: 50;
-//@-webkit-keyframes change_text {
-//  @for $i from 1 to $steps {
-//    $per: 100% / $steps * $i;
-//    $weight: (
-//            100,
-//            200,
-//            300,
-//            400,
-//            500,
-//            600,
-//            700
-//    );
-//    $style: (
-//            normal,
-//            bold,
-//            normal,
-//            bold
-//    );
-//    $decor: (
-//            none,
-//            underline,
-//            none,
-//            underline,
-//            none,
-//            underline,
-//            none
-//    );
-//    $trans: (
-//            lowercase,
-//            uppercase,
-//            lowercase,
-//            uppercase,
-//            lowercase,
-//            uppercase,
-//            lowercase,
-//            uppercase,
-//            lowercase,
-//            uppercase,
-//            lowercase
-//    );
-//
-//    $arrayW: random(7);
-//    $arrayS: random(4);
-//    $arrayD: random(7);
-//    $arrayT: random(11);
-//
-//    #{$per} {
-//      font-weight: nth($weight, $arrayW);
-//      font-style: nth($style, $arrayS);
-//      text-decoration: nth($decor, $arrayD);
-//      text-transform: nth($trans, $arrayT);
-//    }
-//  }
-//}
-
 
 
 
