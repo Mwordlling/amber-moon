@@ -14,6 +14,7 @@ function map() {
         , tileOriginalSize = 1000
         , tileOriginalZoom = 18
         , map
+        , tooltipText = ""
         ;
 
     var BING_KEY = '7iwrppbVdz0lGpikbqd8~xJvG4G_xd7HrgqwcYlBIbA~AtniWbKOD5OuqxuBx-IIWRSI3SNjKx82lcX-YWJlfgKKSdxl_rgRtSdONbogryBN';
@@ -92,7 +93,7 @@ function map() {
                     blocksize * one_px_lng,
                     blocksize * one_px_lat);
                 
-                L.geoJSON(geojson_data, {
+                var hull_layer  = L.geoJSON(geojson_data, {
                     style: {
                         color: "yellow",
                         opacity: 1,
@@ -100,7 +101,8 @@ function map() {
                         fillColor: "white",
                         fillOpacity: 0
                     }
-                }).addTo(map);
+                });
+                hull_layer.addTo(map);
 
                 map.on('zoomstart', function() { map_container.classed("transparent", false)});
                 map.on('dragstart', function() { map_container.classed("transparent", false)});
@@ -128,11 +130,21 @@ function map() {
                     }
                 };
 
+                var tooltip_coordinates = hull_layer.getBounds().getSouthWest();
+                var marker = new L.marker(tooltip_coordinates, { opacity: 0 });
+                marker.bindTooltip("<div class='tooltip-wrapper'><span>" + tooltipText + "</span></div>", {
+                    direction: "bottom",
+                    permanent: true,
+                    className: "map-figure-label",
+                    offset: [0, 0]
+                });
+
                 req .need("squares1")
                     .need("squares9")
                     .ready(function(err, squares1, squares9) {
                         if (err) throw err;
 
+                        // Squares9: 6 -- 10
                         var squares9_layer = L.geoJSON(squares9, {
                             style: {
                                 fillColor: "#c1e600" ,
@@ -169,6 +181,7 @@ function map() {
 
                             if (z > zoomLevel - 1) {
                                 removeAll();
+                                marker.addTo(map);
                                 return;
                             }
 
@@ -183,18 +196,21 @@ function map() {
                             if (z < 10 ) {
                                 squares9_layer.addTo(map);
                                 squares1_layer.removeFrom(map);
+                                marker.removeFrom(map);
+
                             } else if (z >= 10 &&  z < 12) {
                                 removeAll();
                                 squares9_layer.addTo(map);
                                 squares1_layer.addTo(map);
+                                marker.removeFrom(map);
+
                             } else {
                                 squares1_layer.addTo(map);
                                 squares9_layer.removeFrom(map);
+                                marker.removeFrom(map);
                             }
                         }
                     });
-
-                        // Squares9: 6 -- 10
 
                 map.on('zoomstart', onInteraction);
                 map.on('dragstart', onInteraction);
@@ -228,6 +244,12 @@ function map() {
     my.backgroundSize_pc = function (value) {
         if (!arguments.length) return backgroundSize_pc;
         backgroundSize_pc = value;
+        return my
+    };
+
+    my.tooltipText = function (value) {
+        if (!arguments.length) return tooltipText;
+        tooltipText = value;
         return my
     };
 

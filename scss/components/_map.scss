@@ -40,3 +40,19 @@
   opacity: 0;
   z-index: -10;
 }
+
+.map-figure-label {
+  position: absolute;
+  font-family: "Anonymous Pro", sans-serif !important;
+  font-size: 14px;
+  width: 200px;
+
+  .tooltip-wrapper {
+    transform: translate(50%, 0%);
+    width: 200px;
+
+    span {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

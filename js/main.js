@@ -11,7 +11,8 @@ setUpFigure("#figure1", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.604684999999996_27.162096999999996_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.60, y: 0.70}
+    imageOffsetPc: {x: 0.60, y: 0.70},
+    tooltipText: "Рівненська область Рокитнівський район, Старе село"
 });
 
 setUpFigure("#figure2", {
@@ -19,7 +20,8 @@ setUpFigure("#figure2", {
     gridString: "000 101",
     hullString: "0,0 3,0 3,1 2,1 2,2 1,2 1,1 0,1 0,0",
     image: 'selected/500/51.325369_26.900646999999996_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.41, y: 0.47}
+    imageOffsetPc: {x: 0.41, y: 0.47},
+    tooltipText: "Рівненська область Сарненський район, Клесів"
 });
 
 setUpFigure("#figure3", {
@@ -27,7 +29,8 @@ setUpFigure("#figure3", {
     gridString: "01 01 00",
     hullString: "0,0 1,0 1,2 2,2 2,3 0,3 0,0",
     image: 'selected/500/51.564878_26.512397999999997_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.53, y: 0.47}
+    imageOffsetPc: {x: 0.53, y: 0.47},
+    tooltipText: "Рівненська область Дубровицький район, Крупове"
 });
 
 setUpFigure("#figure4", {
@@ -35,7 +38,8 @@ setUpFigure("#figure4", {
     gridString: "0 0 0",
     hullString: "0,0 1,0 1,3 0,3 0,0",
     image: 'selected/500/51.496603_26.354936_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Дубровицький район, Осова"
 });
 
 setUpFigure("#figure5", {
@@ -43,7 +47,8 @@ setUpFigure("#figure5", {
     gridString: "01 00 01",
     hullString: "0,0 1,0 1,1 2,1 2,2 1,2 1,3 0,3 0,0",
     image: 'selected/500/51.582387_27.104335_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Рокитнівський район, Вежиця"
 });
 
 setUpFigure("#figure6", {
@@ -51,7 +56,8 @@ setUpFigure("#figure6", {
     gridString: "0",
     hullString: "0,0 1,0 1,1 0,1 0,0",
     image: 'selected/500/51.639019_27.130822_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Рокитнівський район, Старе село"
 });
 
 setUpFigure("#figure7", {
@@ -59,7 +65,8 @@ setUpFigure("#figure7", {
     gridString: "000",
     hullString: "0,0 3,0 3,1 0,1 0,0",
     image: 'selected/500/51.5682122_26.512397999999997_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Дубровицький район, Крупове"
 });
 
 setUpFigure("#figure8", {
@@ -67,7 +74,8 @@ setUpFigure("#figure8", {
     gridString: "10 00 10",
     hullString: "2,0 2,3 1,3 1,2 0,2 0,1 1,1, 1,0 2,0",
     image: 'selected/500/51.588868_27.153431_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Рокитнівський район, Старе село"
 });
 
 setUpFigure("#figure9", {
@@ -75,7 +83,8 @@ setUpFigure("#figure9", {
     gridString: "10 00",
     hullString: "2,0 2,2 0,2 0,1 1,1 1,0 2,0",
     image: 'selected/500/51.573971199999995_27.129568000000003_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Рокитнівський район, Вежиця"
 });
 
 setUpFigure("#figure10", {
@@ -83,7 +92,8 @@ setUpFigure("#figure10", {
     gridString: "011 000",
     hullString: "0,0 1,0 1,1 3,1 3,2 0,2 0,0",
     image: 'selected/500/51.3361602_26.558144000000002_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Сарненський район, Доротичі"
 });
 
 setUpFigure("#figure11", {
@@ -91,7 +101,8 @@ setUpFigure("#figure11", {
     gridString: "10 00",
     hullString: "2,0 2,2 0,2 0,1 1,1 1,0 2,0",
     image: 'selected/500/51.580773199999996_26.500263_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: "Рівненська область Дубровицький район, Мочулище"
 });
 
 
@@ -104,7 +115,8 @@ setUpFigure("#figureM1", {
     gridString: "000 000 000",
     hullString: "0,0 3,0 3,3 0,3 0,0",
     image: 'selected/500/51.604684999999996_27.162096999999996_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM2", {
@@ -112,7 +124,8 @@ setUpFigure("#figureM2", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.580773199999996_26.500263_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM3", {
@@ -120,7 +133,8 @@ setUpFigure("#figureM3", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.325369_26.900646999999996_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM4", {
@@ -128,7 +142,8 @@ setUpFigure("#figureM4", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.564878_26.512397999999997_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM5", {
@@ -136,7 +151,8 @@ setUpFigure("#figureM5", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.496603_26.354936_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM6", {
@@ -144,7 +160,8 @@ setUpFigure("#figureM6", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.582387_27.104335_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM7", {
@@ -152,7 +169,8 @@ setUpFigure("#figureM7", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.639019_27.130822_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM8", {
@@ -160,7 +178,8 @@ setUpFigure("#figureM8", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.5682122_26.512397999999997_09_Mar_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 setUpFigure("#figureM9", {
@@ -168,7 +187,8 @@ setUpFigure("#figureM9", {
     gridString: "00 00",
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.588868_27.153431_05_Oct_2015_GMT.jpg',
-    imageOffsetPc: {x: 0.3, y: 0.4}
+    imageOffsetPc: {x: 0.3, y: 0.4},
+    tooltipText: ""
 });
 
 
@@ -188,6 +208,7 @@ function setUpFigure(selector, options) {
     d3.select(selector).call(res.figure);
 
     res.map = map()
+            .tooltipText(options.tooltipText)
             .hullString(options.hullString)
             .image(options.image)
             .imageOffsetPc(options.imageOffsetPc)
