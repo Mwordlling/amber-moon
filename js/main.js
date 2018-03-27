@@ -116,7 +116,7 @@ setUpFigure("#figureM1", {
     hullString: "0,0 3,0 3,3 0,3 0,0",
     image: 'selected/500/51.604684999999996_27.162096999999996_05_Oct_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Рокитнівський район, Старе село"
 });
 
 setUpFigure("#figureM2", {
@@ -125,7 +125,7 @@ setUpFigure("#figureM2", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.580773199999996_26.500263_09_Mar_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Сарненський район, Клесів"
 });
 
 setUpFigure("#figureM3", {
@@ -134,7 +134,7 @@ setUpFigure("#figureM3", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.325369_26.900646999999996_05_Oct_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Дубровицький район, Крупове"
 });
 
 setUpFigure("#figureM4", {
@@ -143,7 +143,7 @@ setUpFigure("#figureM4", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.564878_26.512397999999997_09_Mar_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Дубровицький район, Осова"
 });
 
 setUpFigure("#figureM5", {
@@ -152,7 +152,7 @@ setUpFigure("#figureM5", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.496603_26.354936_09_Mar_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Рокитнівський район, Вежиця"
 });
 
 setUpFigure("#figureM6", {
@@ -161,7 +161,7 @@ setUpFigure("#figureM6", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.582387_27.104335_05_Oct_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Рокитнівський район, Старе село"
 });
 
 setUpFigure("#figureM7", {
@@ -170,7 +170,7 @@ setUpFigure("#figureM7", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.639019_27.130822_05_Oct_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Дубровицький район, Крупове"
 });
 
 setUpFigure("#figureM8", {
@@ -179,7 +179,7 @@ setUpFigure("#figureM8", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.5682122_26.512397999999997_09_Mar_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Рокитнівський район, Старе село"
 });
 
 setUpFigure("#figureM9", {
@@ -188,7 +188,7 @@ setUpFigure("#figureM9", {
     hullString: "0,0 2,0 2,2 0,2 0,0",
     image: 'selected/500/51.588868_27.153431_05_Oct_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
-    tooltipText: ""
+    tooltipText: "Рівненська область Рокитнівський район, Вежиця"
 });
 
 
