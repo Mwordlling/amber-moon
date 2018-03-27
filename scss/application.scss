@@ -288,6 +288,59 @@ h3 {
   letter-spacing: 2px;
 }
 
+.note {
+  font-family: "Anonymous Pro", sans-serif !important;
+  z-index: 9999;
+  padding-top: 1vw;
+
+  @media  #{$brk-fixed} {
+    font-size: 16px;
+  }
+  @media #{$brk-fluid} {
+    @include px2vw("font-size", 16px);
+  }
+  @media #{$brk-mobile}  {
+    font-size: 2.3vw;
+  }
+}
+
+.arrow {
+  width: 100%;
+  height: 100%;
+
+  svg {
+    display: block;
+
+    path {
+      stroke: white;
+      fill: none;
+    }
+  }
+}
+
+.arrow-down {
+  svg {
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12%;
+  }
+
+  path {
+      stroke-width: 2px;
+    //@media  #{$brk-fixed} {
+    //  stroke-width: 2px;
+    //}
+    //@media #{$brk-fluid} {
+    //  stroke-width: 2px;
+    //}
+    @media #{$brk-mobile}  {
+      stroke-width: 6px;
+    }
+  }
+}
+
+
 ////footer
 //#footer {
 //  margin:50px 0 auto auto;

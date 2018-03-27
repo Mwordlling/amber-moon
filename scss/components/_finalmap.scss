@@ -1,7 +1,5 @@
 
 #finalmap {
-  //position: fixed;
-
   top: 0;
   bottom: 0;
   left: 0;
@@ -11,39 +9,4 @@
   @media #{$brk-mobile}  {
     height: 85vh;
   }
-
-  //z-index: 1000;
-  //
-  //svg {
-  //  path {
-  //    shape-rendering: crispEdges;
-  //  }
-  //}
-
-//  .close-btn {
-//    position: absolute;
-//    z-index: 999;
-//    width: 30px;
-//    height: 30px;
-//    right: 10px;
-//    top: 10px;
-//    color: white;
-//    font-size: 30px;
-//    cursor: pointer;
-//  }
-//
-//  .close-btn:hover {
-//    color: yellow;
-//  }
-//
-//  .close-btn:before{ content: "\2715"; }
 }
-
-//.leaflet-container.transparent {
-//  background-color:rgba(255,0,0,0.0);
-//}
-//
-//.hidden {
-//  opacity: 0;
-//  z-index: -10;
-//}

@@ -795,6 +795,40 @@ h3 {
   margin-bottom: 40px;
   letter-spacing: 2px; }
 
+.note {
+  font-family: "Anonymous Pro", sans-serif !important;
+  z-index: 9999;
+  padding-top: 1vw; }
+  @media (min-width: 1408px) {
+    .note {
+      font-size: 16px; } }
+  @media (max-width: 1407px) {
+    .note {
+      font-size: 1.13636vw; } }
+  @media (max-width: 699px) {
+    .note {
+      font-size: 2.3vw; } }
+
+.arrow {
+  width: 100%;
+  height: 100%; }
+  .arrow svg {
+    display: block; }
+    .arrow svg path {
+      stroke: white;
+      fill: none; }
+
+.arrow-down svg {
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%; }
+.arrow-down path {
+  stroke-width: 2px; }
+  @media (max-width: 699px) {
+    .arrow-down path {
+      stroke-width: 6px; } }
+
 .click_me {
   position: absolute;
   top: 10%;
