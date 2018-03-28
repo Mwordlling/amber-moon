@@ -132,12 +132,15 @@ function map() {
 
                 var tooltip_coordinates = hull_layer.getBounds().getSouthWest();
                 var marker = new L.marker(tooltip_coordinates, { opacity: 0 });
-                marker.bindTooltip("<div class='tooltip-wrapper'><span>" + tooltipText + "</span></div>", {
-                    direction: "bottom",
-                    permanent: true,
-                    className: "map-figure-label",
-                    offset: [0, 0]
-                });
+
+                setTimeout(function() {
+                    marker.bindTooltip("<div class='tooltip-wrapper'><span>" + tooltipText + "</span></div>", {
+                        direction: "bottom",
+                        permanent: true,
+                        className: "map-figure-label",
+                        offset: [0, 0]
+                    });
+                }, 2000);
 
                 req .need("squares1")
                     .need("squares9")
