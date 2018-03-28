@@ -15,6 +15,7 @@ function map() {
         , tileOriginalZoom = 18
         , map
         , tooltipText = ""
+        , format = d3.format(".4f")
         ;
 
     var BING_KEY = '7iwrppbVdz0lGpikbqd8~xJvG4G_xd7HrgqwcYlBIbA~AtniWbKOD5OuqxuBx-IIWRSI3SNjKx82lcX-YWJlfgKKSdxl_rgRtSdONbogryBN';
@@ -134,12 +135,15 @@ function map() {
                 var marker = new L.marker(tooltip_coordinates, { opacity: 0 });
 
                 setTimeout(function() {
-                    marker.bindTooltip("<div class='tooltip-wrapper'><span>" + tooltipText + "</span></div>", {
-                        direction: "bottom",
-                        permanent: true,
-                        className: "map-figure-label",
-                        offset: [0, 0]
-                    });
+                    marker.bindTooltip(
+                        "<div class='tooltip-wrapper'><span>" + tooltipText + "<br/>" +
+                        format(img_center[0]) + ", " + format(img_center[1]) + "</span></div>",
+                        {
+                            direction: "bottom",
+                            permanent: true,
+                            className: "map-figure-label",
+                            offset: [0, 0]
+                        });
                 }, 2000);
 
                 req .need("squares1")
