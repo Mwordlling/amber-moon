@@ -616,6 +616,16 @@ a:hover {
     #finalmap {
       height: 85vh; } }
 
+#finalmap-container {
+  position: relative; }
+  #finalmap-container #coordinates {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #3d3d3d;
+    padding: 3px; }
+
 html, body, div, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;

@@ -10,3 +10,16 @@
     height: 85vh;
   }
 }
+
+#finalmap-container {
+  position: relative;
+
+  #coordinates {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #3d3d3d;
+    padding: 3px;
+  }
+}

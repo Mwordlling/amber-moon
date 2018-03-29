@@ -1,7 +1,8 @@
 function finalmap() {
 
     var
-        map
+            map
+        ,   format = d3.format(".4f")
         ;
 
     var BING_KEY = '7iwrppbVdz0lGpikbqd8~xJvG4G_xd7HrgqwcYlBIbA~AtniWbKOD5OuqxuBx-IIWRSI3SNjKx82lcX-YWJlfgKKSdxl_rgRtSdONbogryBN';
@@ -21,8 +22,6 @@ function finalmap() {
                         minZoom: 6,
                         scrollWheelZoom: false
                     });
-
-                    window.final_map = map;
 
                     // BING 11+
                     var bingLayer = L.tileLayer.bing({
@@ -70,6 +69,13 @@ function finalmap() {
                     // Для всіх НЕ TileLayer треба прописувати minZoom і maxZoom через хаки
                     map.on("zoomend", onZoomEnd);
                     onZoomEnd();
+
+                    map.on("click", function(e){
+                        d3
+                            .select("#finalmap-container #coordinates")
+                            .classed("hidden", false)
+                            .text(format(e.latlng.lat) + ", " + format(e.latlng.lng));
+                    });
 
                     function onZoomEnd() {
                         function removeAll() {
