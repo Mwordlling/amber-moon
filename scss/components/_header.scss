@@ -3,33 +3,52 @@
 .logo {
   float: left;
   width: 16%!important; //add
-  margin-top: 30px;
+
   //padding-top: 20px; //add
   text-transform: uppercase;
   font-weight: 900;
   z-index: 1000;
   @media #{$brk-fixed} {
-    //font-size: 2.1vw;
+    margin-top:3vw;
   }
   @media #{$brk-fluid}{
-    //font-size: 3vw;
+    margin-top:2vw;
   }
 }
 
-.social-icons {
-  font-size:2.2vw;
-  vertical-align: middle;
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
 
+.social-icons {
+  @media #{$brk-fixed} {
+    font-size:2.2vw;
+    vertical-align: middle;
+  }
+  @media #{$brk-fluid}{
+    font-size:3vw;
+    vertical-align: text-top;
+  }
+  @media #{$brk-mobile}{
+    font-size:5vw;
+    vertical-align: text-top;
+  }
 }
 
 .fa-twitter,
 .fa-facebook-square {
-  margin-top:30px;
   padding: 3px;
   float: right;
   cursor: pointer;
   &:hover{
     color: $orange;
+  }
+  @media #{$brk-fixed} {
+    margin-top:3vw;
+  }
+  @media #{$brk-fluid}{
+    margin-top:2vw;
   }
 }
 
@@ -39,14 +58,49 @@
 
 .fa-facebook-square {
   color: #ffffff;
-  margin-right: 15px;
+  @media  #{$brk-fixed} {
+    top: calc( #{$cell-fixed} / 3);
+    margin-right: 15px;
+  }
+  @media #{$brk-fluid} {
+    top: calc( #{$cell-fluid} / 4);
+    margin-right: 15px;
+  }
+  @media #{$brk-mobile}  {
+    top: calc( #{$cell-mobile} / 3);
+    margin-right: 5px;
+  }
+
+
+
 }
 
 a {
   color: white;
   text-decoration: none;
-  }
+}
 
 a:hover {
   color:$orange;
+}
+
+
+.lang-en a {
+  font-family: 'Arial', sans-serif;
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  @media  #{$brk-fixed} {
+    top: calc( #{$cell-fixed} / 3);
+    font-size: 1.6rem;
+  }
+  @media #{$brk-fluid} {
+    top: calc( #{$cell-fluid} / 4);
+    font-size: 1.4rem;
+  }
+  @media #{$brk-mobile}  {
+    top: calc( #{$cell-mobile} / 3);
+    font-size: 0.9rem;
+  }
+
 }
