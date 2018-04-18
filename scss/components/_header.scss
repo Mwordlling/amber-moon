@@ -1,78 +1,78 @@
 /* ======== HEADER ======== */
 
+.logo-buttons {
+  padding-top:2vw;
+  display:grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr repeat(5, 1fr) 1fr 0.5fr 0.5fr;
+  grid-gap:1rem;
+}
+
 .logo {
-  float: left;
-  width: 16%!important; //add
-
-  //padding-top: 20px; //add
+  font-family: "Arial Black", "Arial Bold", sans-serif;
+  font-weight: bold;
+  grid-column: 1 / 3;
   text-transform: uppercase;
-  font-weight: 900;
-  z-index: 1000;
+  align-self: center;
   @media #{$brk-fixed} {
-    margin-top:3vw;
+    font-size:1.4vw;
   }
   @media #{$brk-fluid}{
-    margin-top:2vw;
-  }
-}
-
-.icons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social-icons {
-  @media #{$brk-fixed} {
-    font-size:2.2vw;
-    vertical-align: middle;
-  }
-  @media #{$brk-fluid}{
-    font-size:3vw;
-    vertical-align: text-top;
+    font-size:1.7vw;
   }
   @media #{$brk-mobile}{
-    font-size:5vw;
-    vertical-align: text-top;
+    font-size:3vw;
   }
 }
 
-.fa-twitter,
-.fa-facebook-square {
-  padding: 3px;
-  float: right;
-  cursor: pointer;
-  &:hover{
-    color: $orange;
-  }
+.lang-en {
+  align-self: center;
   @media #{$brk-fixed} {
-    margin-top:3vw;
+    grid-column: -3 / -4;
   }
   @media #{$brk-fluid}{
-    margin-top:2vw;
+    grid-column: -3 / -4;
   }
+  @media #{$brk-mobile}{
+    grid-column: -4 / -6;
+  }
+}
+
+.lang-en a {
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.fb {
+  grid-column: -2 / -3;
+}
+
+.tw {
+  grid-column: -1 / -2;
+}
+
+
+.fb, .tw {
+  @media #{$brk-fixed} {
+    font-size: 1.5vw;
+  }
+  @media #{$brk-fluid}{
+    font-size: 2.5vw;
+  }
+  @media #{$brk-mobile}{
+    font-size: 4vw;
+  }
+}
+
+.fa-facebook-square {
+  color: #ffffff;
+  vertical-align: baseline;
+  float: right;
 }
 
 .fa-twitter {
+  float: right;
   color: #ffffff;
-}
-
-.fa-facebook-square {
-  color: #ffffff;
-  @media  #{$brk-fixed} {
-    top: calc( #{$cell-fixed} / 3);
-    margin-right: 15px;
-  }
-  @media #{$brk-fluid} {
-    top: calc( #{$cell-fluid} / 4);
-    margin-right: 15px;
-  }
-  @media #{$brk-mobile}  {
-    top: calc( #{$cell-mobile} / 3);
-    margin-right: 5px;
-  }
-
-
-
+  vertical-align: baseline;
 }
 
 a {
@@ -84,23 +84,3 @@ a:hover {
   color:$orange;
 }
 
-
-.lang-en a {
-  font-family: 'Arial', sans-serif;
-  position: absolute;
-  left: 0;
-  font-weight: 800;
-  @media  #{$brk-fixed} {
-    top: calc( #{$cell-fixed} / 3);
-    font-size: 1.6rem;
-  }
-  @media #{$brk-fluid} {
-    top: calc( #{$cell-fluid} / 4);
-    font-size: 1.4rem;
-  }
-  @media #{$brk-mobile}  {
-    top: calc( #{$cell-mobile} / 3);
-    font-size: 0.9rem;
-  }
-
-}
