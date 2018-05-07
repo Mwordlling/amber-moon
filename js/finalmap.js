@@ -6,7 +6,7 @@ function finalmap() {
         ;
 
     //var BING_KEY = '7iwrppbVdz0lGpikbqd8~xJvG4G_xd7HrgqwcYlBIbA~AtniWbKOD5OuqxuBx-IIWRSI3SNjKx82lcX-YWJlfgKKSdxl_rgRtSdONbogryBN';
-    var BING_KEY = 'AuqA-58PKA4LcTvP8isuN9yqXR-rUN5saFUhGKD_WO7oDdYmDHJNxBkMAhpGmvj1';
+    var BING_KEY = 'AtS74q5Idk1hJDnE225Oyt5zAcgNi_cfXxsLoXW2a8jgzyFeJbXfCII2eBEjwX1N';
 
     
     function my(selection) {
