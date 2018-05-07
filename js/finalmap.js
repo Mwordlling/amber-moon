@@ -5,8 +5,10 @@ function finalmap() {
         ,   format = d3.format(".4f")
         ;
 
-    var BING_KEY = '7iwrppbVdz0lGpikbqd8~xJvG4G_xd7HrgqwcYlBIbA~AtniWbKOD5OuqxuBx-IIWRSI3SNjKx82lcX-YWJlfgKKSdxl_rgRtSdONbogryBN';
+    //var BING_KEY = '7iwrppbVdz0lGpikbqd8~xJvG4G_xd7HrgqwcYlBIbA~AtniWbKOD5OuqxuBx-IIWRSI3SNjKx82lcX-YWJlfgKKSdxl_rgRtSdONbogryBN';
+    var BING_KEY = 'AuqA-58PKA4LcTvP8isuN9yqXR-rUN5saFUhGKD_WO7oDdYmDHJNxBkMAhpGmvj1';
 
+    
     function my(selection) {
 
         selection.each(function() {
