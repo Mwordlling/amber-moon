@@ -7,7 +7,7 @@ var height = 20;
 var div = d3.select("#figure1")
     .append('div')
     .style("position", "absolute")
-    .attr('class', "click_me");
+    .attr('class', "click_me active");
 
 div.append('p')
     .html("click me")
@@ -58,3 +58,7 @@ svg_m.append("line")
     .attr("y1", 20)
     .attr("x2", 10)
     .attr("y2", 10);
+
+
+d3.select("#figure1")
+    .on("click", function() { div.classed("active", false) });
