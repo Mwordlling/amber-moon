@@ -26,7 +26,7 @@ function map() {
                         [25.433, 50.965],
                         [29.342, 51.956]
                     ],
-                    style: '/data/style.json',
+                    style: './data/style.json',
                     renderWorldCopies: false,
                     maxBoundsViscosity: 0.9
                 });
@@ -84,7 +84,7 @@ function map() {
                     for (let i = 1; i <= 44; i++) {
                         const sourceId = `pmtiles_raster_source_${i}`;
                         const layerId = `pmtiles_raster_layer_${i}`;
-                        const filePath = `pmtiles://data/tiles/${i}.pmtiles`;
+                        const filePath = `pmtiles://./data/tiles/${i}.pmtiles`;
                 
                         map.addSource(sourceId, {
                             type: 'raster',
@@ -102,10 +102,10 @@ function map() {
                         });
                     }
                 
-                    fetch(`/data/data9.geojson`)
-                    .then(response => response.json())
-                    .then(data9 => {
-                
+                    async function loadGeojsonData() {
+                        const response9 = await fetch(`/data/data9.geojson`);
+                        const data9 = await response9.json();
+
                         map.addSource('file9', {
                             type: 'geojson',
                             data: data9
@@ -125,12 +125,10 @@ function map() {
                                 ]
                             }
                         });
-                    });
-                
-                    fetch(`/data/data1.geojson`)
-                    .then(response => response.json())
-                    .then(data1 => {
-                
+
+                        const response1 = await fetch(`/data/data1.geojson`);
+                        const data1 = await response1.json();
+
                         map.addSource('file1', {
                             type: 'geojson',
                             data: data1
@@ -166,7 +164,9 @@ function map() {
                                 ]
                             }
                         });
-                    });
+                    }
+
+                    loadGeojsonData();                    
 
                     const blocksize = container.select('.elementary-block').node().getBoundingClientRect().width;
                     const geojson_data = geojsonHull(

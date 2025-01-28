@@ -56,10 +56,10 @@ map2.on('load', () => {
         });
     }
 
-    fetch(`./data/data9.geojson`)
-    .then(response => response.json())
-    .then(data9 => {
-
+    async function loadGeojsonData() {
+        const response9 = await fetch(`/data/data9.geojson`);
+        const data9 = await response9.json();
+    
         map2.addSource('file9', {
             type: 'geojson',
             data: data9
@@ -79,12 +79,10 @@ map2.on('load', () => {
                 ]
             }
         });
-    });
-
-    fetch(`./data/data1.geojson`)
-    .then(response => response.json())
-    .then(data1 => {
-
+    
+        const response1 = await fetch(`/data/data1.geojson`);
+        const data1 = await response1.json();
+    
         map2.addSource('file1', {
             type: 'geojson',
             data: data1
@@ -120,6 +118,8 @@ map2.on('load', () => {
                 ]
             }
         });
-    });
+    }
+
+    loadGeojsonData();
 
 });
