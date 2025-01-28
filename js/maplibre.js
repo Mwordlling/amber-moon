@@ -10,7 +10,7 @@ map2 = new maplibregl.Map({
         [25.433, 50.965],
         [29.342, 51.956]
     ],
-    style: '/data/style.json',
+    style: './data/style.json',
     renderWorldCopies: false,
     maxBoundsViscosity: 0.9
 });
@@ -38,7 +38,7 @@ map2.on('load', () => {
     for (let i = 1; i <= 44; i++) {
         const sourceId = `pmtiles_raster_source_${i}`;
         const layerId = `pmtiles_raster_layer_${i}`;
-        const filePath = `pmtiles://data/tiles/${i}.pmtiles`;
+        const filePath = `pmtiles://./data/tiles/${i}.pmtiles`;
 
         map2.addSource(sourceId, {
             type: 'raster',
@@ -56,7 +56,7 @@ map2.on('load', () => {
         });
     }
 
-    fetch(`/data/data9.geojson`)
+    fetch(`./data/data9.geojson`)
     .then(response => response.json())
     .then(data9 => {
 
@@ -81,7 +81,7 @@ map2.on('load', () => {
         });
     });
 
-    fetch(`/data/data1.geojson`)
+    fetch(`./data/data1.geojson`)
     .then(response => response.json())
     .then(data1 => {
 
