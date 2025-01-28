@@ -57,7 +57,7 @@ map2.on('load', () => {
     }
 
     async function loadGeojsonData() {
-        const response9 = await fetch(`/data/data9.geojson`);
+        const response9 = await fetch(`./data/data9.geojson`);
         const data9 = await response9.json();
     
         map2.addSource('file9', {
@@ -80,7 +80,7 @@ map2.on('load', () => {
             }
         });
     
-        const response1 = await fetch(`/data/data1.geojson`);
+        const response1 = await fetch(`./data/data1.geojson`);
         const data1 = await response1.json();
     
         map2.addSource('file1', {
