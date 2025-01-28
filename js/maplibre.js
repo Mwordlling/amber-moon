@@ -10,8 +10,7 @@ map2 = new maplibregl.Map({
         [25.433, 50.965],
         [29.342, 51.956]
     ],
-    // Тестова мапа, треба змінити на свій MapTiler
-    style: 'https://api.maptiler.com/maps/hybrid/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+    style: '/data/style.json',
     renderWorldCopies: false,
     maxBoundsViscosity: 0.9
 });

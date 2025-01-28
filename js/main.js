@@ -192,8 +192,6 @@ setUpFigure("#figureM9", {
 });
 
 
-d3.select("#finalmap").call(finalmap());
-
 
 
 function setUpFigure(selector, options) {

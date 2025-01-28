@@ -26,7 +26,7 @@ function map() {
                         [25.433, 50.965],
                         [29.342, 51.956]
                     ],
-                    style: 'https://api.maptiler.com/maps/hybrid/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+                    style: '/data/style.json',
                     renderWorldCopies: false,
                     maxBoundsViscosity: 0.9
                 });
