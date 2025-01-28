@@ -36,7 +36,7 @@ document.addEventListener('keydown', (e) => {
 //
 
 map2.on('load', () => {
-    for (let i = 1; i <= 28; i++) {
+    for (let i = 1; i <= 44; i++) {
         const sourceId = `pmtiles_raster_source_${i}`;
         const layerId = `pmtiles_raster_layer_${i}`;
         const filePath = `pmtiles://data/tiles/${i}.pmtiles`;
@@ -91,15 +91,6 @@ map2.on('load', () => {
             data: data1
         });
         map2.addLayer({
-            id: 'polygon1-outline',
-            type: 'line',
-            source: 'file1',
-            paint: {
-                'line-color': '#98c336',
-                'line-width': 1
-            }
-        });
-        map2.addLayer({
             id: 'polygon1-fill',
             type: 'fill',
             source: 'file1',
@@ -109,8 +100,24 @@ map2.on('load', () => {
                     'interpolate',
                     ['linear'],
                     ['zoom'],
-                    8, 0.5,
-                    14, 0
+                    14, 0.5,
+                    15, 0
+                ]
+            }
+        });
+        map2.addLayer({
+            id: 'polygon1-outline',
+            type: 'line',
+            source: 'file1',
+            paint: {
+                'line-color': '#98c336',
+                'line-width': 1,
+                'line-opacity': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    14, 1,
+                    15, 0
                 ]
             }
         });
