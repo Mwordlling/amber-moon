@@ -24,7 +24,7 @@ const navigation = new maplibregl.NavigationControl({
 });
 map2.addControl(navigation, 'top-right');
 
-// Можна змінювати зум кнопками + та -
+// Можна змінювати зум кнопками + та - ; ctrl / command
 document.addEventListener('keydown', (e) => {
     if (e.key === '+') {
         map2.zoomIn({ duration: 300 });
@@ -32,6 +32,16 @@ document.addEventListener('keydown', (e) => {
         map2.zoomOut({ duration: 300 });
     }
 });
+document.addEventListener('wheel', (e) => {
+    if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+            map2.zoomIn({ duration: 300 });
+        } else {
+            map2.zoomOut({ duration: 300 });
+        }
+    }
+}, { passive: false });
 //
 
 map2.on('load', () => {

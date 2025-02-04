@@ -3,7 +3,7 @@ function map() {
     let imageOffsetPc = { x: 0, y: 0 };
     let backgroundSize_pc, map;
     let tooltipText = "";
-    const tileOriginalSize = 1000, tileOriginalZoom = 18;
+    const tileOriginalSize = 1000, tileOriginalZoom = 17;
     let format = d3.format(".4f")
 
     function my(selection) {
@@ -143,8 +143,8 @@ function map() {
                                     'interpolate',
                                     ['linear'],
                                     ['zoom'],
-                                    14, 0.5,
-                                    15, 0
+                                    13, 0.5,
+                                    14, 0
                                 ]
                             }
                         });
@@ -159,8 +159,8 @@ function map() {
                                     'interpolate',
                                     ['linear'],
                                     ['zoom'],
-                                    14, 1,
-                                    15, 0
+                                    13, 1,
+                                    14, 0
                                 ]
                             }
                         });
@@ -194,7 +194,7 @@ function map() {
                     const tooltip_coordinates = [bounds[0], bounds[1]];
 
                     const popup = new maplibregl.Popup({
-                        offset: [0, 10],
+                        offset: [0, -30],
                         anchor: 'bottom',
                         closeButton: false,
                         closeOnClick: false
@@ -206,10 +206,10 @@ function map() {
                     let popupVisible = true;
 
                     function updatePopupVisibility(zoomLevel) {
-                        if (zoomLevel <= 12.5 && popupVisible) {
+                        if (zoomLevel <= 13.5 && popupVisible) {
                             popup.remove();
                             popupVisible = false;
-                        } else if (zoomLevel > 12.5 && !popupVisible) {
+                        } else if (zoomLevel > 13.5 && !popupVisible) {
                             popup.addTo(map);
                             popupVisible = true;
                         }

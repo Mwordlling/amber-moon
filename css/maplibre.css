@@ -32,31 +32,23 @@
     z-index: 98;
 }
 
-/*Зум*/
-.maplibregl-ctrl-group{
-   background: rgba(255, 255, 255, 0.5);
-}
-.maplibregl-ctrl-group button{
-    width: 3vw;
-    min-width: 75px;
-    height: 3vw;
-    min-height: 75px;
-}
-.maplibregl-ctrl-icon{
-    background-size: contain;
-    opacity: 90%;
-}
-
 /*Popup*/
 .maplibregl-popup-tip{
     display: none;
 }
 .maplibregl-popup-content{
-    background: #00000080;
+    pointer-events: none;
+    background: none;
+    box-shadow: none;
+    padding: inherit !important;
     padding: 10px;
 }
+.tooltip-wrapper span{
+    line-height: 24px;
+    background: rgba(0, 0, 0, 0.5);
+}
 .tooltip-wrapper{
-    font-size: calc(10px + 0.2vw);
+    font-size: 14px;
     font-family: "Anonymous Pro", sans-serif;
 }
 .maplibregl-popup{
@@ -70,8 +62,5 @@
         min-width: inherit;
         height: 35px;
         min-height: inherit;
-    }
-    .tooltip-wrapper{
-        font-size: calc(10px + 0.7vw);
     }
 }

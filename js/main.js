@@ -87,14 +87,15 @@ setUpFigure("#figure9", {
     tooltipText: "Рівненська область Рокитнівський район, Вежиця"
 });
 
-setUpFigure("#figure10", {
+// Зникла область
+/*setUpFigure("#figure10", {
     figureSize: {x: 3, y: 2},
     gridString: "011 000",
     hullString: "0,0 1,0 1,1 3,1 3,2 0,2 0,0",
     image: 'selected/500/51.3361602_26.558144000000002_09_Mar_2015_GMT.jpg',
     imageOffsetPc: {x: 0.3, y: 0.4},
     tooltipText: "Рівненська область Сарненський район, Доротичі"
-});
+});*/
 
 setUpFigure("#figure11", {
     figureSize: {x: 2, y: 2},
