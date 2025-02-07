@@ -8,7 +8,7 @@ map2 = new maplibregl.Map({
     maxZoom: 18.5,
     maxBounds: [
         [25.433, 50.965],
-        [29.342, 51.956]
+        [29.16, 51.83]
     ],
     style: './data/style.json',
     renderWorldCopies: false,
