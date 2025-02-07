@@ -46,7 +46,7 @@ document.addEventListener('wheel', (e) => {
 
 map2.on('load', () => {
 
-    map2.addSource('abmerS', {
+    map2.addSource('amberS', {
         type: 'raster',
         url: `pmtiles://https://texty.org.ua/d/maps/pm/amber.pmtiles`,
         tileSize: 256
