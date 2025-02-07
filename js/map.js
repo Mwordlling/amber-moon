@@ -19,22 +19,18 @@ async function loadMap() {
     });
 
     mapIntance.on('load', () => {
-        for (let i = 1; i <= 44; i++) {
-            const sourceId = `pmtiles_raster_source_${i}`;
-            const layerId = `pmtiles_raster_layer_${i}`;
-            const filePath = `pmtiles://./data/tiles/${i}.pmtiles`;
 
-            mapIntance.addSource(sourceId, {
-                type: 'raster',
-                url: filePath,
-                tileSize: 256
-            });
-            mapIntance.addLayer({
-                id: layerId,
-                type: 'raster',
-                source: sourceId
-            });
-        }
+        mapIntance.addSource('amberS', {
+            type: 'raster',
+            url: `pmtiles://https://texty.org.ua/d/maps/pm/amber.pmtiles`,
+            tileSize: 256
+        });
+        mapIntance.addLayer({
+            id: 'amber',
+            type: 'raster',
+            source: 'amberS'
+        });
+
         async function loadGeojsonData() {
             const response9 = await fetch(`./data/data9.geojson`);
             const data9 = await response9.json();

@@ -45,26 +45,17 @@ document.addEventListener('wheel', (e) => {
 //
 
 map2.on('load', () => {
-    for (let i = 1; i <= 44; i++) {
-        const sourceId = `pmtiles_raster_source_${i}`;
-        const layerId = `pmtiles_raster_layer_${i}`;
-        const filePath = `pmtiles://./data/tiles/${i}.pmtiles`;
 
-        map2.addSource(sourceId, {
-            type: 'raster',
-            url: filePath,
-            tileSize: 256
-        });
-
-        map2.addLayer({
-            id: layerId,
-            type: 'raster',
-            source: sourceId,
-            paint: {
-                'raster-opacity': 0.8
-            }
-        });
-    }
+    map2.addSource('abmerS', {
+        type: 'raster',
+        url: `pmtiles://https://texty.org.ua/d/maps/pm/amber.pmtiles`,
+        tileSize: 256
+    });
+    map2.addLayer({
+        id: 'amber',
+        type: 'raster',
+        source: 'amberS'
+    });
 
     async function loadGeojsonData() {
         const response9 = await fetch(`./data/data9.geojson`);
